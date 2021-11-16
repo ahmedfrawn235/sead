@@ -5032,7 +5032,7 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'الحق الواد هرب')
 send(msg.chat_id_, msg.reply_to_message_id_, 'هقوره😿')  
 return false 
 end
-f text == ' تفعيل الحمايه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+if text == ' تفعيل الحمايه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Contact"..msg.chat_id_, del )  
 database:set(bot_id.."lock:Spam"..msg.chat_id_, del )  
 database:set(bot_id.."lock:Photo"..msg.chat_id_, del )  
