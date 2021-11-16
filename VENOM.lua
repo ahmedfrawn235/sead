@@ -3625,7 +3625,7 @@ end
 local Text =[[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [Source Channel](https://t.me/source_frawn)
+⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
 
 ]]
 keyboard = {} 
@@ -3675,7 +3675,7 @@ if text == 'امر الـعـضو ' or text == 'اوامر الأعضاء' or te
 local Text = [[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [Source Channel](https://t.me/source_frawn)
+⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -5032,7 +5032,101 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'الحق الواد هرب')
 send(msg.chat_id_, msg.reply_to_message_id_, 'هقوره😿')  
 return false 
 end
-
+f text == ' تفعيل الحمايه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:set(bot_id.."lock:Contact"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Spam"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Photo"..msg.chat_id_, del )  
+database:set(bot_id.."lock:forward"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Link"..msg.chat_id_, del )
+database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_, del )  
+database:set(bot_id.. lock:Fshar ..msg.chat_id_,true) 
+database:set(bot_id.. lock:Fars ..msg.chat_id_,true) 
+database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
+database:set(bot_id.."lock:Bot:kick"..msg.chat_id_, kick )  
+database:set(bot_id.. lock_edit_med ..msg.chat_id_,true) 
+database:set(bot_id.."lock:inline"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Video"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Animation"..msg.chat_id_, del )  
+database:set(bot_id.."lock:Sticker"..msg.chat_id_, del )  
+database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
+database:set(bot_id.."lock:Video"..msg.chat_id_, ked )  
+database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood", mute )  
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_, ' ◍ تم تعطيل جلب الصوره ،\n ◍ تم قفل البوتات  ،\n ◍ تم قفل التكرار ،\n ◍ تم قفل الروابط ،\n ◍ تم قفل التوجيه ،\n ◍ تم قفل الملصقات ،\n ◍ تم قفل المتحركه ،\n ◍ تم قفل الفيديو ،\n ◍ تم قفل الفشار ،\n ◍ تم قفل الانلاين ،\n ◍ تم قفل تعديل المديا ،\n ◍ تم وضع التكرار  ،\n ◍ تم قفل الفارسيه  ،\n ◍ تم وضع الايدي بدون صوره ،n  \n ◍ تم تفعيل الحمايه  بواسطه ، [「' ..Rutba(msg.sender_user_id_,msg.chat_id_)..' 」](T.ME/' ..(data.username_ or  'textchuser ')..')')
+end,nil)   
+end
+if text ==  'تعطيل الحمايه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:del(bot_id.."lock:inline"..msg.chat_id_)  
+database:del(bot_id.."lock:Lock:Sexy"..msg.chat_id_)  
+database:hdel(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood")  
+database:set(bot_id.. lock_edit_med ..msg.chat_id_,true) 
+database:del(bot_id.. lock:Fshar ..msg.chat_id_) 
+database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
+database:del(bot_id.."lock:Photo"..msg.chat_id_)  
+database:del(bot_id.."lock:Video"..msg.chat_id_)  
+database:del(bot_id.."lock:Link"..msg.chat_id_)  
+database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
+database:del(bot_id.."lock:Animation"..msg.chat_id_)  
+database:del(bot_id.."lock:forward"..msg.chat_id_)  
+database:del(bot_id.. Bot:Id ..msg.chat_id_) 
+database:del(bot_id.. Bot:Id:Photo ..msg.chat_id_) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_, ' ◍ تم تفعيل جلب الصوره ،\n ◍ تم  فتح البوتات  ،\n ◍ تم  فتح التكرار ،\n ◍ تم  فتح الروابط ،\n ◍ تم  فتح التوجيه ،\n ◍ تم  فتح الملصقات ،\n ◍ تم  فتح المتحركه ،\n ◍ تم  فتح الفيديو ،\n ◍ تم  فتح الفشار ،\n ◍ تم  فتح الانلاين ،\n ◍ تم  فتح تعديل المديا ،\n ◍ تم وضع التكرار  ،\n ◍ تم  فتح الفارسيه  ،\n ◍ تم وضع الايدي بصوره،n \n ◍ تم تفعيل الحمايه  بواسطه ، [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or  'textchuser' )..') ')
+end,nil)   
+end
+if text == ' تفعيل الحمايه القصوه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:set(bot_id.."lock:text"..msg.chat_id_,true) 
+database:set(bot_id.."lock:AddMempar"..msg.chat_id_, kick )
+database:set(bot_id.."lock:Join"..msg.chat_id_, kick )
+database:set(bot_id.."lock:Bot:kick"..msg.chat_id_, kick )
+database:set(bot_id.."lockpin"..msg.chat_id_, true) 
+database:sadd(bot_id.. lock:pin ,msg.chat_id_) 
+database:set(bot_id.. lock:tagservr ..msg.chat_id_,true)  
+database:set(bot_id.. lock:Fars ..msg.chat_id_,true) 
+database:set(bot_id.. lock:Fshar ..msg.chat_id_,true)
+database:set(bot_id.. lock:edit ..msg.chat_id_,true) 
+database:set(bot_id.."lock:inline"..msg.chat_id_, del )
+database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_, del )
+database:del(bot_id.."pp_photo:status"..msg.chat_id_) 
+database:del(bot_id.."my_photo:status"..msg.chat_id_) 
+database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood", keed )  
+database:set(bot_id.."lock:Contact"..msg.chat_id_, ked )  
+database:set(bot_id.."lock:Spam"..msg.chat_id_, ked )  
+database:set(bot_id.."lock:forward"..msg.chat_id_, ked )  
+database:set(bot_id.."lock:Keyboard"..msg.chat_id_, ked )  
+database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
+database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
+database:set(bot_id.."lock:Photo"..msg.chat_id_, ked )  
+database:set(bot_id.."lock:geam"..msg.chat_id_, ked )  
+database:set(bot_id.."lock:Sticker"..msg.chat_id_, ktm )  
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,' تم قفل الحمايه كامله\nتحظير هذا الحمايه تقفل كل حاجه بلتقييد\nتفعيل الحمايه دي بس عند التفليش او التحفيل\nلتعطيل الحمايه القصوه\nاكتب تعطيل الحمايه القوصه\n تم تفعيل الحمايه القصوه من قبل [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or  'textchuser ')..')')
+end,nil)   
+end
+if text == ' تعطيل الحمايه القصوه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+database:del(bot_id.."lock:Spam"..msg.chat_id_)  
+database:del(bot_id.."lock:Join"..msg.chat_id_)  
+database:del(bot_id.."lock:text"..msg.chat_id_)  
+database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
+database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
+database:del(bot_id.. lock:edit ..msg.chat_id_)
+database:del(bot_id.."lockpin"..msg.chat_id_)  
+database:del(bot_id.. lock:Fshar ..msg.chat_id_) 
+database:del(bot_id.. lock:Fars ..msg.chat_id_) 
+database:del(bot_id.."lock:Link"..msg.chat_id_)  
+database:del(bot_id.. sing:for:me ..msg.chat_id_)  
+database:del(bot_id.."lock:Photo"..msg.chat_id_)  
+database:del(bot_id.."lock:Video"..msg.chat_id_)  
+database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
+database:del(bot_id.."lock:forward"..msg.chat_id_)  
+database:del(bot_id.."lock:geam"..msg.chat_id_)  
+database:del(bot_id.. Bot:Id:Photo ..msg.chat_id_) 
+database:set(bot_id.."pp_photo:status"..msg.chat_id_,true) 
+database:set(bot_id.."my_photo:status"..msg.chat_id_,true) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
+send(msg.chat_id_, msg.id_,  ' تم تعطيل الحمايه القصوه من قبل  [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or ' textchuser ').. ')')
+end,nil)   
+end
 if text == "ثيم" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,57); 
 local Text ='اضغط علي الزر لاختيار ثيم اخر' 
@@ -17124,7 +17218,7 @@ end
 local Teext =[[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [Source Channel](https://t.me/source_frawn)
+⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
