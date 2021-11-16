@@ -3873,7 +3873,6 @@ local Text = [[
 keyboard = {}
 keyboard.inline_keyboard = {
 {{text = '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}},
-{{text = '◗مــطــور الــبــوت◖', url="http://t.me/"..sudos.UserName}},
 {{text = '𝗗𝙀𝗩 𝙀𝗟 𝗦𝙀𝗔𝗗',url="t.me/UU_ML1"}},
 {{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗',url="t.me/source_frawn"}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
