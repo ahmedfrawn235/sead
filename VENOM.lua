@@ -3880,86 +3880,29 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-
-if text and text:match("^احمد$") or text and text:match("^الصياد$") or text and text:match("^صياد $") then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("`","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("`","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(1679303777,"⋆ . هناك شخص يريدك يا سيدي المطور صياد   \n⋆ الشخص  {"..Name.."}\n⋆ اسم الجروب {"..NameChat.."}\n⋆ ايدي الجروب {`"..msg.chat_id_.."`}\n⋆ رابط الجروب \n ["..LinkGroup.."] ",0,'md')
-end,nil)
-end,nil)
-end
-if text == 'احمد' or text == 'الصياد' or text == 'صياد' then
-local id = '1679303777'
-local urrl = https.request('https://api.telegram.org/bot'..tokenget..'/getchat?chat_id='..id)
-local json = JSON.decode(urrl)
-local name = json.result.first_name
-local user = json.result.username
-local bio = json.result.bio
+if text ==  'صياد '  then
+local Text = [[
+مع مالك السورس لو حابب تتواصل معاه
+اتبع الزر إلى تحت ↓
+]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = name,url="t.me/"..user}},}
+keyboard.inline_keyboard = {
+{{text = ' 𝗗𝙀𝗩 𝙀𝗟 𝗦𝙀𝗔𝗗' ,url="t.me/UU_ML1"}},
+}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..user..'&caption=' .. URL.escape(bio).."&reply_to_message_id="..msg_id.."&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..' /sendPhoto?chat_id=  '.. msg.chat_id_ .. '&photo=https://t.me/UU_ML1&caption=  '.. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text and text:match("^فرعون$") or text and text:match("^مبرمج$") or text and text:match("^داد$") then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("`","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("`","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(SUDO,"⋆ . هناك شخص يريدك يا سيدي مبرمج فرعون الكبير  \n⋆ الشخص  {"..Name.."}\n⋆ اسم الجروب {"..NameChat.."}\n⋆ ايدي الجروب {`"..msg.chat_id_.."`}\n⋆ رابط الجروب \n ["..LinkGroup.."] ",0,'md')
-end,nil)
-end,nil)
-end
-if text == 'فرعون' or text == 'مبرمج' or text == 'داد' then
-local id = 'SUDO'
-local urrl = https.request('https://api.telegram.org/bot'..tokenget..'/getchat?chat_id='..id)
-local json = JSON.decode(urrl)
-local name = json.result.first_name
-local user = json.result.username
-local bio = json.result.bio
+if text =='فرعون ' then
+local Text = [[
+مع مالك السورس لو حابب تتواصل معاه
+اتبع الزر إلى تحت ↓
+]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = name,url="t.me/"..user}},}
+keyboard.inline_keyboard = {
+{{text = 'فرعون للمعلومات ' ,url="t.me/DEV_FRAWN"}},
+}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..user..'&caption=' .. URL.escape(bio).."&reply_to_message_id="..msg_id.."&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token.. '/sendPhoto?chat_id= ' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/11&caption= ' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -5031,101 +4974,6 @@ send(msg.chat_id_, msg.reply_to_message_id_, 'ها رد يكسمك')
 send(msg.chat_id_, msg.reply_to_message_id_, 'الحق الواد هرب')  
 send(msg.chat_id_, msg.reply_to_message_id_, 'هقوره😿')  
 return false 
-end
-if text == ' تفعيل الحمايه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
-database:set(bot_id.."lock:Contact"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Spam"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Photo"..msg.chat_id_, del )  
-database:set(bot_id.."lock:forward"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Link"..msg.chat_id_, del )
-database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_, del )  
-database:set(bot_id.. lock:Fshar ..msg.chat_id_,true) 
-database:set(bot_id.. lock:Fars ..msg.chat_id_,true) 
-database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
-database:set(bot_id.."lock:Bot:kick"..msg.chat_id_, kick )  
-database:set(bot_id.. lock_edit_med ..msg.chat_id_,true) 
-database:set(bot_id.."lock:inline"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Video"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Animation"..msg.chat_id_, del )  
-database:set(bot_id.."lock:Sticker"..msg.chat_id_, del )  
-database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
-database:set(bot_id.."lock:Video"..msg.chat_id_, ked )  
-database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood", mute )  
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_, ' ◍ تم تعطيل جلب الصوره ،\n ◍ تم قفل البوتات  ،\n ◍ تم قفل التكرار ،\n ◍ تم قفل الروابط ،\n ◍ تم قفل التوجيه ،\n ◍ تم قفل الملصقات ،\n ◍ تم قفل المتحركه ،\n ◍ تم قفل الفيديو ،\n ◍ تم قفل الفشار ،\n ◍ تم قفل الانلاين ،\n ◍ تم قفل تعديل المديا ،\n ◍ تم وضع التكرار  ،\n ◍ تم قفل الفارسيه  ،\n ◍ تم وضع الايدي بدون صوره ،n  \n ◍ تم تفعيل الحمايه  بواسطه ، [「' ..Rutba(msg.sender_user_id_,msg.chat_id_)..' 」](T.ME/' ..(data.username_ or  'textchuser ')..')')
-end,nil)   
-end
-if text ==  'تعطيل الحمايه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
-database:del(bot_id.."lock:inline"..msg.chat_id_)  
-database:del(bot_id.."lock:Lock:Sexy"..msg.chat_id_)  
-database:hdel(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood")  
-database:set(bot_id.. lock_edit_med ..msg.chat_id_,true) 
-database:del(bot_id.. lock:Fshar ..msg.chat_id_) 
-database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
-database:del(bot_id.."lock:Photo"..msg.chat_id_)  
-database:del(bot_id.."lock:Video"..msg.chat_id_)  
-database:del(bot_id.."lock:Link"..msg.chat_id_)  
-database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
-database:del(bot_id.."lock:Animation"..msg.chat_id_)  
-database:del(bot_id.."lock:forward"..msg.chat_id_)  
-database:del(bot_id.. Bot:Id ..msg.chat_id_) 
-database:del(bot_id.. Bot:Id:Photo ..msg.chat_id_) 
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_, ' ◍ تم تفعيل جلب الصوره ،\n ◍ تم  فتح البوتات  ،\n ◍ تم  فتح التكرار ،\n ◍ تم  فتح الروابط ،\n ◍ تم  فتح التوجيه ،\n ◍ تم  فتح الملصقات ،\n ◍ تم  فتح المتحركه ،\n ◍ تم  فتح الفيديو ،\n ◍ تم  فتح الفشار ،\n ◍ تم  فتح الانلاين ،\n ◍ تم  فتح تعديل المديا ،\n ◍ تم وضع التكرار  ،\n ◍ تم  فتح الفارسيه  ،\n ◍ تم وضع الايدي بصوره،n \n ◍ تم تفعيل الحمايه  بواسطه ، [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or  'textchuser' )..') ')
-end,nil)   
-end
-if text == ' تفعيل الحمايه القصوه 'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
-database:set(bot_id.."lock:text"..msg.chat_id_,true) 
-database:set(bot_id.."lock:AddMempar"..msg.chat_id_, kick )
-database:set(bot_id.."lock:Join"..msg.chat_id_, kick )
-database:set(bot_id.."lock:Bot:kick"..msg.chat_id_, kick )
-database:set(bot_id.."lockpin"..msg.chat_id_, true) 
-database:sadd(bot_id.. lock:pin ,msg.chat_id_) 
-database:set(bot_id.. lock:tagservr ..msg.chat_id_,true)  
-database:set(bot_id.. lock:Fars ..msg.chat_id_,true) 
-database:set(bot_id.. lock:Fshar ..msg.chat_id_,true)
-database:set(bot_id.. lock:edit ..msg.chat_id_,true) 
-database:set(bot_id.."lock:inline"..msg.chat_id_, del )
-database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_, del )
-database:del(bot_id.."pp_photo:status"..msg.chat_id_) 
-database:del(bot_id.."my_photo:status"..msg.chat_id_) 
-database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood", keed )  
-database:set(bot_id.."lock:Contact"..msg.chat_id_, ked )  
-database:set(bot_id.."lock:Spam"..msg.chat_id_, ked )  
-database:set(bot_id.."lock:forward"..msg.chat_id_, ked )  
-database:set(bot_id.."lock:Keyboard"..msg.chat_id_, ked )  
-database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
-database:set(bot_id.. Bot:Id:Photo ..msg.chat_id_,true) 
-database:set(bot_id.."lock:Photo"..msg.chat_id_, ked )  
-database:set(bot_id.."lock:geam"..msg.chat_id_, ked )  
-database:set(bot_id.."lock:Sticker"..msg.chat_id_, ktm )  
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' تم قفل الحمايه كامله\nتحظير هذا الحمايه تقفل كل حاجه بلتقييد\nتفعيل الحمايه دي بس عند التفليش او التحفيل\nلتعطيل الحمايه القصوه\nاكتب تعطيل الحمايه القوصه\n تم تفعيل الحمايه القصوه من قبل [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or  'textchuser ')..')')
-end,nil)   
-end
-if text == ' تعطيل الحمايه القصوه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
-database:del(bot_id.."lock:Spam"..msg.chat_id_)  
-database:del(bot_id.."lock:Join"..msg.chat_id_)  
-database:del(bot_id.."lock:text"..msg.chat_id_)  
-database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
-database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
-database:del(bot_id.. lock:edit ..msg.chat_id_)
-database:del(bot_id.."lockpin"..msg.chat_id_)  
-database:del(bot_id.. lock:Fshar ..msg.chat_id_) 
-database:del(bot_id.. lock:Fars ..msg.chat_id_) 
-database:del(bot_id.."lock:Link"..msg.chat_id_)  
-database:del(bot_id.. sing:for:me ..msg.chat_id_)  
-database:del(bot_id.."lock:Photo"..msg.chat_id_)  
-database:del(bot_id.."lock:Video"..msg.chat_id_)  
-database:del(bot_id.."lock:Sticker"..msg.chat_id_)  
-database:del(bot_id.."lock:forward"..msg.chat_id_)  
-database:del(bot_id.."lock:geam"..msg.chat_id_)  
-database:del(bot_id.. Bot:Id:Photo ..msg.chat_id_) 
-database:set(bot_id.."pp_photo:status"..msg.chat_id_,true) 
-database:set(bot_id.."my_photo:status"..msg.chat_id_,true) 
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,  ' تم تعطيل الحمايه القصوه من قبل  [「' ..Rutba(msg.sender_user_id_,msg.chat_id_).. '」](T.ME/' ..(data.username_ or ' textchuser ').. ')')
-end,nil)   
 end
 if text == "ثيم" and not  bot_data:get(ban_id.."sing:for:me"..msg.chat_id_) then 
 ban = math.random(1,57); 
