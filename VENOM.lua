@@ -3875,6 +3875,7 @@ keyboard.inline_keyboard = {
 {{text = '𝗗𝙀𝗩 𝗙𝙍𝗔𝙒𝗡',url="t.me/DEV_FRAWN"}},
 {{text = '𝗗𝙀𝗩 𝙀𝗟 𝗦𝙀𝗔𝗗',url="t.me/UU_ML1"}},
 {{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗',url="t.me/source_frawn"}},
+{{text =  '◗مــطــور الــبــوت◖ ', url="http://t.me/"..sudos.UserName}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5 
