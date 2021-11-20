@@ -18139,7 +18139,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/change-siusr' then
 local Teext =[[
-𖢜 𝚆𝙴𝙻𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴  𝚃𝙴𝙰𝙼 𝙴𝙻𝙺𝙼𝙰𝙰
+𖢜 𝚆𝙴𝙻𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
