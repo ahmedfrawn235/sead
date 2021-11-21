@@ -18493,7 +18493,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text =  ' ˹𝐃𝐄𝐕 𝐅𝐑𝐀𝐖𝐍 ˼ ' ,url="t.me/DEV_FRAWN"},{text =' ˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼' ,url="t.me/frawnwbot"}}, 
-{{text = ' ˹𝐃𝐄𝐕 𝐄𝐋 𝐒𝐄𝐀𝐃˼ ',url="t.me/UU_ML1"},{text = '˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼',url="t.me/Seadfrbot"}},
+{{text = ' ˹𝐃𝐄𝐕 𝐄𝐋 𝐒𝐀𝐘𝐀𝐃˼ ',url="t.me/UU_ML1"},{text = '˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼',url="t.me/Seadfrbot"}},
 {{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="/zDRGd"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
