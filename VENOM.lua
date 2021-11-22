@@ -18148,11 +18148,11 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-if Text == '/change-siusr' then
+if Text == '/frawn3' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
-𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18165,11 +18165,11 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 
 
-if Text == '/HHH' then
+if Text == '/frawn4' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
-𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -18486,30 +18486,30 @@ end
 
 if Text =='/frawn' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
-𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text =  ' ˹𝐃𝐄𝐕 𝐅𝐑𝐀𝐖𝐍 ˼ ' ,url="t.me/DEV_FRAWN"},{text =' ˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼' ,url="t.me/frawnwbot"}}, 
 {{text = ' ˹𝐃𝐄𝐕 𝐄𝐋 𝐒𝐀𝐘𝐀𝐃˼ ',url="t.me/UU_ML1"},{text = '˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼',url="t.me/Seadfrbot"}},
-{{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="/HHH"}},
+{{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="/frawn4"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 
 if Text ==  '/frawn2' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
-𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
+𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' 🐬🦈الَصّـــــــ قُنِاةّـــــــــيِّادٍ🐬🦈 ',url="t.me/hornafsy123"}},
 {{text = ' 𖤍 𝘽𝙒𝙎𝙏𝘼𝙏 𖤍 ' ,url="t.me/source_frawn"}},
-{{text =  ' ˹ 𝐁 𝐀 𝐂 𝐊 ˼ ', callback_data="/change-siusr"}},
+{{text =  ' ˹ 𝐁 𝐀 𝐂 𝐊 ˼ ', callback_data="/frawn3"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
