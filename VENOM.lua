@@ -3876,6 +3876,28 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
+if Text =='yousuf' then
+local Teext =[[
+╭▱▰▱▰𓆩[𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/UU_ML1)𓆪▱▰▱▰╮
+┆
+┆[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+  𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
+  𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
+┆
+╰▱▰▱▰𓆩[𝙁𝙍𝘼𝙒𝙉](https://t.me/DEV_FRAWN)𓆪▱▰▱▰╯
+]]
+keyboard = {}
+keyboard.inline_keyboard = {
+{{text = '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"}},
+{{text =  ' 𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text =  '◗مــطــور الــبــوت◖ ', url="http://t.me/"..sudos.UserName}},
+{{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
+}
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
 if text ==  'صياد '  then
 local Text = [[
 مع مالك السورس لو حابب تتواصل معاه
@@ -12388,7 +12410,17 @@ send(msg.chat_id_, msg.id_," ✘ تم تعطيل الرابط")
 return false end
 end
 
-
+if text =='يوسف' then
+local Text = [[
+ساهم المطور يوسف في تطوير جزءمن السورس وكسم اي حد ميعرفهوش
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'يوسف المغفلق ' ,url="t.me/php_d"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token.. '/sendPhoto?chat_id= ' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/11&caption= ' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 ---------------------
 if text == "تفعيل صورتي" or text == 'تفعيل الصوره' then
 if Constructor(msg) then  
@@ -18494,7 +18526,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text =  ' ˹𝐃𝐄𝐕 𝐅𝐑𝐀𝐖𝐍 ˼ ' ,url="t.me/DEV_FRAWN"},{text =' ˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼' ,url="t.me/frawnwbot"}}, 
 {{text = ' ˹𝐃𝐄𝐕 𝐄𝐋 𝐒𝐀𝐘𝐀𝐃˼ ',url="t.me/UU_ML1"},{text = '˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼',url="t.me/Seadfrbot"}},
-{{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="/help8"}},
+{{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="yousuf"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -18509,7 +18541,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = ' 🐬🦈الَصّـــــــ قُنِاةّـــــــــيِّادٍ🐬🦈 ',url="t.me/hornafsy123"}},
 {{text = ' 𖤍 𝘽𝙒𝙎𝙏𝘼𝙏 𖤍 ' ,url="t.me/source_frawn"}},
-{{text =  ' ˹ 𝐁 𝐀 𝐂 𝐊 ˼ ', callback_data="/help8"}},
+{{text =  ' ˹ 𝐁 𝐀 𝐂 𝐊 ˼ ', callback_data="yousuf"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
