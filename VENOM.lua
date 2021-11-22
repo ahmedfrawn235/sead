@@ -14224,9 +14224,30 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
-if text == 'رتبتي' then
-local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-send(msg.chat_id_, msg.id_,'⋆ رتـبتـك ⤌  '..rtp..'  ')
+if text == "رتبتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'sasa_boody'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' 🌝🖤 رتبتك في البوت » '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Sasa = 'https://t.me/xxxcccvvbbnn/903'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&message='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&message=' .. URL.escape(Sasa).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
 end
 
 if text == 'تفعيل رتبتي' and Manager(msg) then   
@@ -17167,7 +17188,7 @@ local Teext =[[
 ⋆ and Take
 ⋆ Crown for Soutat
 ⋆ Wipe Wattat
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍??𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
 ⋆ 
 ⋆ Crown for drapes
 ⋆ Clear Docks
