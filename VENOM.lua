@@ -3868,8 +3868,7 @@ local Text = [[
 ]]
 keyboard = {}
 keyboard.inline_keyboard = {
-{{text = '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"}},
-{{text =  ' 𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text = '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"},{text =  ' 𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
 {{text =  '◗مــطــور الــبــوت◖ ', url="http://t.me/"..sudos.UserName}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
@@ -18142,8 +18141,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ' ,callback_data="/frawn"}},
-{{text =    '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ' ,callback_data="/frawn"},{text =    '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18156,8 +18154,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text ='𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"}},
-{{text =  '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text ='𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"},{text =  '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
 {{text = '◗مــطــور الــبــوت◖', url="http://t.me/"..sudos.UserName}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
@@ -18173,8 +18170,7 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"}},
-{{text =   '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ',callback_data="/frawn"},{text =   '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
 {{text = '◗مــطــور الــبــوت◖', url="http://t.me/"..sudos.UserName}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
