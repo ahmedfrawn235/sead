@@ -22,31 +22,31 @@ file:write(serialized)
 file:close()  
 end  
 if not bot_data:get(id_server..":token") then
-io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n\27')
+io.write('\27[0;31m\n ارسل لي توكن البوت الان ↓ :\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n\27')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[0;31m𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n التوكن غير صحيح تاكد منه ثم ارسله')
+print('\27[0;31m𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
-io.write('\27[0;31m تم حفظ التوكن بنجاح \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n27[0;39;49m')
+io.write('\27[0;31m تم حفظ التوكن بنجاح \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n27[0;39;49m')
 local json = JSON.decode(url)
 bot_data:set(id_server..":token_username",json.result.username)
 bot_data:set(id_server..":token",token)
 end 
 else
-print('\27[0;35m𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n لم يتم حفظ التوكن ارسل لي التوكن الان')
+print('\27[0;35m𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
 os.execute('lua VENOM.lua')
 end
 if not bot_data:get(id_server..":SUDO:ID") then
-io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n\27[0;33;49m')
+io.write('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n27[0;39;49m')
+io.write('\27[1;35m تم حفظ ايدي المطور الاساسي \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n27[0;39;49m')
 bot_data:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;31m𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 
 io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -84,15 +84,15 @@ token="]]..bot_data:get(id_server..":token")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗"
+echo "𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔"
 echo "TG IS NOT FIND IN FILES BOT"
-echo "𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗"
+echo "𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔"
 exit 1
 fi
 if [ ! $token ]; then
-echo "𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗"
+echo "𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔"
 echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE sasa.lua \e[0m"
-echo "𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗"
+echo "𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔"
 exit 1
 fi
 echo -e "\033[38;5;208m"
@@ -151,7 +151,7 @@ print([[
 
 فرعون للمعلومات      
 𖤍𝙁𝙍𝘼𝙒𝙉 𝙒𝘼𖤍       
-> CH › @source_frawn     
+> CH › @s_aytra     
 ~> DEVELOPER › @DEV_FRAWN   
 ]])
 sudos = dofile("./sasa.lua") 
@@ -190,7 +190,7 @@ end
 return VENOM  
 end 
 
-sudo_users = {SUDO,1970574026,1679303777}   
+sudo_users = {SUDO,1970574026,1770739933}   
 function SudoBot(msg)  
 local VENOM = false  
 for k,v in pairs(sudo_users) do  
@@ -321,7 +321,7 @@ end
 end
 
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1679303777) then  
+if tonumber(user_id) == tonumber(1770739933) then  
 var = true 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = true  
@@ -363,8 +363,8 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1679303777) then  
-var = ' مطور السورس' 
+if tonumber(user_id) == tonumber(1770739933) then  
+var = ' مالك السورس' 
 elseif tonumber(user_id) == tonumber(1970574026) then
 var = '[المبرمج فرعون الكبير](https://t.me/DEV_FRAWN)'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -570,7 +570,7 @@ end
 function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "source_frawn")
+local UserName = (data.username_ or "s_aytra")
 local NameUser = "⋆  مـن قبـل  ⤌ ["..data.first_name_.."](T.me/"..UserName..")"
 local NameUserr = "⋆ اسم المستخدم  ⤌ ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "reply" then
@@ -992,7 +992,7 @@ send(msg.chat_id_, msg.id_,pre_msg)
 end
 
 --------------------------------------------------------------------------------------------------------------
-function source_frawn(msg,data) -- بداية العمل
+function s_aytra(msg,data) -- بداية العمل
 if msg then
 local text = msg.content_.text_
 --------------------------------------------------------------------------------------------------------------
@@ -1007,7 +1007,7 @@ end
 return false
 end
 local list = bot_data:smembers(ban_id.."botss:VENOM:List:Rd:Sudo")
-text = "\nقائمة ردود المتعدده \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+text = "\nقائمة ردود المتعدده \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 db = "رساله "
 text = text..""..k.." => 『 '..v..' 』 => 『 '..db..' 』\n"
@@ -1121,7 +1121,7 @@ end
 
 if text == ("الردود العامه") and Devban(msg) then 
 local list = bot_data:smembers(ban_id..'List:Rd:Sudo')
-text = "\n⋆ قائمة الردود العامه \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+text = "\n⋆ قائمة الردود العامه \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 if bot_data:get(ban_id.."Add:Rd:Sudo:Gif"..v) then
 db = 'متحركه'
@@ -1386,7 +1386,7 @@ end
 
 if text == ("الردود") and Manager(msg) then
 local list = bot_data:smembers(ban_id..'List:Manager'..msg.chat_id_..'')
-text = "⋆ قائمه الردود \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+text = "⋆ قائمه الردود \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 if bot_data:get(ban_id.."Add:Rd:Manager:Gif"..v..msg.chat_id_) then
 db = 'متحركه'
@@ -1623,7 +1623,7 @@ if Chat_Type == 'UserBot' then
 if text == '/start' or text == '『رجوع』' then 
 if Devban(msg) then
 if not msa3d(msg) then
-local bl = '⋆ انت الان المطور الثانوي في البوت\n⋆ يمكنك تحكم في البوتات من الكيبورد\n⋆ [تابع جديدنا](t.me/source_frawn)'
+local bl = '⋆ انت الان المطور الثانوي في البوت\n⋆ يمكنك تحكم في البوتات من الكيبورد\n⋆ [تابع جديدنا](t.me/s_aytra)'
 local keyboard = {
 {'الاحصائيات'},
 {'معلومات الكيبورد'},
@@ -1642,7 +1642,7 @@ end
 if text == "/start" then
 if not msa3d(msg) then
 if not Devban(msg) then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'الصياد') 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سيطره') 
 local VENOM_Msg = { 
 ' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ أهلآ بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
 } 
@@ -1679,7 +1679,7 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == '『رجوع』' then  
 if msa3d(msg) then
-local bl = '⋆ انت الان المطور الاساسي في البوت\n⋆ يمكنك تحكم في البوت من الكيبورد \n⋆ [تابع جديدنا](t.me/source_frawn)'
+local bl = '⋆ انت الان المطور الاساسي في البوت\n⋆ يمكنك تحكم في البوت من الكيبورد \n⋆ [تابع جديدنا](t.me/s_aytra)'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'الاحصائيات'},
@@ -1850,12 +1850,12 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '📟l •⊱ 『 نظام التشغيل 』 ⊰•\n* '"$linux_version"'*' 
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 🖨️l •⊱ 『 الذاكره العشوائيه 』  ⊰•\n『* '"$memUsedPrc"'*』'
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 💾l •⊱ 『 وحـده الـتـخـزيـن 』  ⊰•\n『* '"$HardDisk"'*』'
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 🖥️l •⊱ 『 موقـع الـسـيـرفـر 』 ⊰•\n『*»» '`curl http://th3boss.com/ip/location`'*』'
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 🕹️l •⊱ 『 الـمــعــالــج 』  ⊰•\n『* '"`grep -c processor /proc/cpuinfo`""Core ~ 『$CPUPer%』 "'*』'
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 👨🏾‍🔧l •⊱ 『 الــدخــول 』  ⊰•\n『* '`whoami`'*』'
-echo '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n 🔌l •⊱ 『 مـده تـشغيـل الـسـيـرفـر 』 ⊰•\n『* '"$uptime"'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 🖨️l •⊱ 『 الذاكره العشوائيه 』  ⊰•\n『* '"$memUsedPrc"'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 💾l •⊱ 『 وحـده الـتـخـزيـن 』  ⊰•\n『* '"$HardDisk"'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 🖥️l •⊱ 『 موقـع الـسـيـرفـر 』 ⊰•\n『*»» '`curl http://th3boss.com/ip/location`'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 🕹️l •⊱ 『 الـمــعــالــج 』  ⊰•\n『* '"`grep -c processor /proc/cpuinfo`""Core ~ 『$CPUPer%』 "'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 👨🏾‍🔧l •⊱ 『 الــدخــول 』  ⊰•\n『* '`whoami`'*』'
+echo '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n 🔌l •⊱ 『 مـده تـشغيـل الـسـيـرفـر 』 ⊰•\n『* '"$uptime"'*』'
 ]]):read('*all'))  
 end
 if text == 'تحديث السورس ' and Devban(msg) then 
@@ -1986,7 +1986,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and Devban(msg) then 
 bot_data:del(ban_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,'⋆ اصدار سورس الصياد{ S:1✓}')
+send(msg.chat_id_, msg.id_,'⋆ اصدار سورس سيطره{ S:1✓}')
 end
 
 if text == 'معلومات الكيبورد' and Devban(msg) then
@@ -2014,7 +2014,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'قناه السورس', url="t.me/source_frawn"}}, 
+{{text = 'قناه السورس', url="t.me/s_aytra"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2031,16 +2031,16 @@ end
 if text == 'قناه السورس' and Devban(msg) then
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
-[𝐅𝐑𝐀𝐖𝐍 𝐖𝐀](https://t.me/source_frawn)
+[𝐅𝐑𝐀𝐖𝐍 𝐖𝐀](https://t.me/s_aytra)
 
-[فرعون للمعلومات](https://t.me/source_frawn)
+[فرعون للمعلومات](https://t.me/s_aytra)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍◖', url="t.me/source_frawn"}}, 
+{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍◖', url="t.me/s_aytra"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and msa3d(msg) then  
@@ -2050,7 +2050,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
-t = "\n⋆ قائمة مطورين الثانويين للبوت \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة مطورين الثانويين للبوت \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2089,7 +2089,7 @@ return false
 end
 if text == ("المطورين") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
-t = "\n⋆ قائمة المطورين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المطورين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2105,7 +2105,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("قائمه العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
-t = "\n⋆ قائمه المحظورين عام \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمه المحظورين عام \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2122,7 +2122,7 @@ return false
 end
 if text == ("قائمه الكتم العام") and msa3d(msg) then
 local list = bot_data:smembers(ban_id..'Gmute:User')
-t = "\n⋆ قائمة المكتومين عام \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المكتومين عام \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -2801,7 +2801,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(ban_id) then 
 print("it is Bot")
-N = (bot_data:get(ban_id.."Name:Bot") or "الصياد")
+N = (bot_data:get(ban_id.."Name:Bot") or "سيطره")
 tdcli_function ({ID = "GetUser",user_id_ = ban_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = ban_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -2901,7 +2901,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n⋆ ["..VENOM_Msg.."] \n")
 else
-send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/source_frawn)}\n⋆ ["..VENOM_Msg.."] \n")
+send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/s_aytra)}\n⋆ ["..VENOM_Msg.."] \n")
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -3445,7 +3445,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0, "⋆ عذرا  ⤌ {[@"..data.username_.."]}\n⋆ عذرا تم منع الملصق \n" ) 
 else
-send(msg.chat_id_,0, "⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/source_frawn)}\n⋆ عذرا تم منع الملصق \n" ) 
+send(msg.chat_id_,0, "⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/s_aytra)}\n⋆ عذرا تم منع الملصق \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -3482,7 +3482,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⋆ عذرا  ⤌ {[@"..data.username_.."]}\n⋆ عذرا تم منع الصوره \n" ) 
 else
-send(msg.chat_id_,0,"⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/source_frawn)}\n⋆ عذرا تم منع الصوره \n") 
+send(msg.chat_id_,0,"⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/s_aytra)}\n⋆ عذرا تم منع الصوره \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -3499,7 +3499,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⋆ عذرا  ⤌ {[@"..data.username_.."]}\n⋆ عذرا تم منع المتحركه \n") 
 else
-send(msg.chat_id_,0,"⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/source_frawn)}\n⋆ عذرا تم منع المتحركه \n" ) 
+send(msg.chat_id_,0,"⋆ عذرا  ⤌ {["..data.first_name_.."](T.ME/s_aytra)}\n⋆ عذرا تم منع المتحركه \n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -3621,7 +3621,7 @@ end
 local Text =[[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
+⋆ CH - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
 
 ]]
 keyboard = {} 
@@ -3649,7 +3649,7 @@ local Text = [[
  اهلا بك في قسم الالعاب ..↑↓
  اختر العبه الذي تريدها .↑↓
 ده من الازرار بلاسفل . ↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
  
 ]]
 keyboard = {} 
@@ -3661,17 +3661,17 @@ keyboard.inline_keyboard = {
 {text = '◗ متطوره◖', callback_data="/DRG"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'امر الـعـضو ' or text == 'اوامر الأعضاء' or text == 'اوامر الاعضاء' then
 local Text = [[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
+⋆ CH - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3679,7 +3679,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3725,7 +3725,7 @@ keyboard.inline_keyboard = {
 {text = '@Dlik', callback_data="/Dlik"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3813,7 +3813,7 @@ keyboard.inline_keyboard = {
 {text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3858,13 +3858,13 @@ end
 ----------------------------------------------------------------- انتهئ الاوامر الجديدة
 if text == 'السورس' or text == 'سورس' or text == '111' then 
 local Text = [[ 
-╭▱▰▱▰𓆩[𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/UU_ML1)𓆪▱▰▱▰╮
+╭▱▰▱▰𓆩[𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)𓆪▱▰▱▰╮
 ┆
-┆[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+┆[𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
   𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
-  𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/source_frawn)
+  𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼](https://t.me/s_aytra)
 ┆
-╰▱▰▱▰𓆩[𝙁𝙍𝘼𝙒𝙉](https://t.me/DEV_FRAWN)𓆪▱▰▱▰╯
+╰▱▰▱▰𓆩[𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)𓆪▱▰▱▰╯
 ]]
 keyboard = {}
 keyboard.inline_keyboard = {
@@ -3873,23 +3873,11 @@ keyboard.inline_keyboard = {
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/source_frawn/185&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text ==  'صياد '  then
-local Text = [[
-مع مالك السورس لو حابب تتواصل معاه
-اتبع الزر إلى تحت ↓
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = ' 𝗗𝙀𝗩 𝙀𝗟 𝗦𝙀𝗔𝗗' ,url="t.me/UU_ML1"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..' /sendPhoto?chat_id='.. msg.chat_id_ ..'&photo=https://t.me/UU_ML1&caption= '.. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/s_aytra/1129&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text =='فرعون ' then
 local Text = [[
-مع مالك السورس لو حابب تتواصل معاه
+مع المبرمج فرعون لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
 ]]
 keyboard = {} 
@@ -4250,7 +4238,7 @@ local vBandav_Msg = {
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس الصياد؟ ", 
+"ما هيا عيوب سورس سيطره؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -4266,13 +4254,13 @@ local vBandav_Msg = {
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس الصياد؟؟ ", 
+" هل يعجبك سورس سيطره؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس الصياد؟ ", 
+"اي رايك في سورس سيطره؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " آخر مره ضربت عشره كانت متى ؟", 
@@ -5009,14 +4997,14 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == 'قناة السورس' then
 local Text = [[ 
-[قناه سورس الصياد وتابع الجديد](t.me/source_frawn)
+[قناه سورس سيطره وتابع الجديد](t.me/s_aytra)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}}, 
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
@@ -5028,11 +5016,11 @@ keyboard.inline_keyboard = {
 {{text = ' 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐍', url="t.me/frawnwabot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'العاب الصياد' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب سيطره' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
-⋆ اهلا في قائمه الالعاب المتطوره سورس الصياد⋆ 
+⋆ اهلا في قائمه الالعاب المتطوره سورس سيطره⋆ 
 تفضل اختر لعبه من القائمه 
 ]]  
 keyboard = {}   
@@ -5062,10 +5050,10 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/source_frawn/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_aytra/10&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --------------------------------------------------------------------------------------------------------------
 if text == 'تحديث' and Devban(msg) then    
@@ -5089,7 +5077,7 @@ return false
 end
 if text == ("قائمه العام") and Devban(msg) then
 local list = bot_data:smembers(ban_id..'GDRG:User')
-t = "\n⋆ قائمة المحظورين عام \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المحظورين عام \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -5127,7 +5115,7 @@ if bot_data:sismember(ban_id..'msa3d:ban', result.sender_user_id_) then
 send(msg.chat_id_, msg.id_, "*⋆ لا تستطيع حظره او كتمه عام*")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1679303777) then  
+if tonumber(result.sender_user_id_) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مالك السورس عام")
 return false 
 end
@@ -5147,7 +5135,7 @@ bot_data:sadd(ban_id..'GDRG:User', result.sender_user_id_)
 chat_kick(result.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
 function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم حظرو عام من الجروبات '
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5185,7 +5173,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", result.id_) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مساعد عام")
 return false 
 end
-if result.id_ == tonumber(1679303777) then
+if result.id_ == tonumber(1770739933) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مالك السورس \n")
 return false 
 end
@@ -5201,7 +5189,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك حظر مالك السورس \n")
 return false 
 end
-usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 's_aytra')..')'
 status  = '\n⋆ تم حظرو عام من الجروبات '
 texts = usertext..status
 bot_data:sadd(ban_id..'GDRG:User', result.id_)
@@ -5237,7 +5225,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", userid) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مساعد عام")
 return false 
 end
-if tonumber(userid) == tonumber(1679303777) then  
+if tonumber(userid) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع حظر مالك السورس عام")
 return false 
 end
@@ -5256,7 +5244,7 @@ end
 bot_data:sadd(ban_id..'GDRG:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم حظرو عام من الجروبات '
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5290,7 +5278,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", result.sender_user_id_) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مساعد عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1679303777) then  
+if tonumber(result.sender_user_id_) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -5309,7 +5297,7 @@ end
 bot_data:sadd(ban_id..'Gmute:User', result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},
 function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم كتمه عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5343,7 +5331,7 @@ if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم المطور الاساسي \n")
 return false 
 end
-if result.id_ == tonumber(1679303777) then
+if result.id_ == tonumber(1770739933) then
 send(msg.chat_id_, msg.id_, "⋆ لا يمكنك كتم مالك السورس \n")
 return false 
 end
@@ -5363,7 +5351,7 @@ if bot_data:sismember(ban_id.."msa3d:ban", result.id_) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مساعد عام")
 return false 
 end
-usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 's_aytra')..')'
 status  = '\n⋆ تم كتمه عام من الجروبات'
 texts = usertext..status
 bot_data:sadd(ban_id..'Gmute:User', result.id_)
@@ -5395,7 +5383,7 @@ if tonumber(userid) == tonumber(ban_id) then
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم البوت عام")
 return false 
 end
-if tonumber(userid) == tonumber(1679303777) then  
+if tonumber(userid) == tonumber(1770739933) then  
 send(msg.chat_id_, msg.id_, "⋆ لا تسطيع كتم مالك السورس عام")
 return false 
 end
@@ -5418,7 +5406,7 @@ end
 bot_data:sadd(ban_id..'Gmute:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم كتمه عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5440,7 +5428,7 @@ return false
 end
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم الغاء (الحظر-الكتم) عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -5463,7 +5451,7 @@ return false
 end
 function start_function(extra, result, success)
 if result.id_ then
-usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..result.title_..'](t.me/'..(username or 's_aytra')..')'
 status  = '\n⋆ تم الغاء (الحظر-الكتم) عام من الجروبات'
 texts = usertext..status
 bot_data:srem(ban_id..'GDRG:User', result.id_)
@@ -5491,7 +5479,7 @@ bot_data:srem(ban_id..'GDRG:User', userid)
 bot_data:srem(ban_id..'Gmute:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status  = '\n⋆ تم الغاء (الحظر-الكتم) عام من الجروبات'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -5739,12 +5727,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @source_frawn \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @s_aytra \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@source_frawn』 ↝🇧??\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝💘\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@s_aytra』 ↝🇧??\n')
 else
-send(msg.chat_id_, msg.id_, '\n⋆ الصوره ⤌ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↝ 『'..username..'』\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』\n¦• 𝒄𝒉↝  『@source_frawn』\n')
+send(msg.chat_id_, msg.id_, '\n⋆ الصوره ⤌ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↝ 『'..username..'』\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』\n¦• 𝒄𝒉↝  『@s_aytra』\n')
 end 
 end
 end
@@ -5763,7 +5751,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @source_frawn  \n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @s_aytra  \n')
 end
 end
 
@@ -5854,12 +5842,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @source_frawn \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, ban.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n• 🖤 | 𝑼𝑬𝑺 : '..username..' \n• 🖤 | 𝑴𝑺𝑮 : '..Msguser..' \n• 🖤 | 𝑺𝑻𝑨 : '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n• 🖤 | 𝑰𝑫 :  '..msg.sender_user_id_..' \n• 🖤 | b𝐼𝑂 : '..getbioY..' \n• 🖤 | 𝐶𝐻 : @s_aytra \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝??\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰??𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@source_frawn』 ↝🇧??\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 『'..Name..'』 \n¦• 𝚄𝚂𝙴𝚁 ↝  『'..Name..'』    ↝??\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』.   ↝💘\n ¦• 𝚁𝙰??𝙺↝ 『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』    ↝💘\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』    ↝💘\n¦• 𝒄𝒉↝   『@s_aytra』 ↝🇧??\n')
 else
-send(msg.chat_id_, msg.id_, '\n⋆ الصوره ⤌ ليس لديك صور في حسابك'..'[\n¦• 𝚄??𝙴𝚁 ↝ 『'..username..'』\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』\n¦• 𝒄𝒉↝  『@source_frawn』\n')
+send(msg.chat_id_, msg.id_, '\n⋆ الصوره ⤌ ليس لديك صور في حسابك'..'[\n¦• 𝚄??𝙴𝚁 ↝ 『'..username..'』\n¦• 𝙼𝚂𝙶𝚂↝ 『'..Msguser..'』\n¦• 𝙸𝙳↝  『'..msg.sender_user_id_..'』\n¦• 𝒄𝒉↝  『@s_aytra』\n')
 end 
 end
 end
@@ -5878,7 +5866,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @source_frawn  \n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↝  '..username..' \n¦• 𝙼𝚂𝙶𝚂↝ '..Msguser..' \n¦• 𝚁𝙰𝙽𝙺↝ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n¦• 𝙸𝙳↝  '..msg.sender_user_id_..' \n¦• 𝒄𝒉↝ @s_aytra  \n')
 end
 end
 
@@ -5917,7 +5905,7 @@ function start_function(extra, result, success)
 local keyboard = {
 {{text = 'حظر او الغاء الحظر ', callback_data=msg.sender_user_id_.."uqhqthju"..result.sender_user_id_},{text = 'رفع مشرف', callback_data='amr@'..msg.sender_user_id_..'/user@'..result.sender_user_id_.."/setiinginfo"}},   
 {{text ='تحكم الرتب',callback_data=msg.sender_user_id_.."unUpS"..result.sender_user_id_}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 send_inline_key(msg.chat_id_,"مـرحبـا بـك فـي قائـمه التحكم في العضـو فقط اضغط علي الامر ⤈ ",nil,keyboard,msg_id)
@@ -5942,7 +5930,7 @@ GetFile_Bot(msg)
 end
 if text == 'الاوامر المضافه' and Constructor(msg) then
 local list = bot_data:smembers(ban_id..'List:Cmd:Group:New'..msg.chat_id_..'')
-t = "⋆ قائمه الاوامر المضافه  \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "⋆ قائمه الاوامر المضافه  \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 Cmds = bot_data:get(ban_id.."Set:Cmd:Group:New1"..msg.chat_id_..':'..v)
 print(Cmds)
@@ -7077,7 +7065,7 @@ send(msg.chat_id_, msg.id_, "\n⋆ تم مسح قائمة المطورين  ")
 end
 
 if text == 'الملفات' and Devban(msg) then
-t = '⋆ ملفات السورس الصياد↓\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 \n'
+t = '⋆ ملفات السورس سيطره↓\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -7094,8 +7082,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⋆ اهلا بك في متجر ملفات الصياد\n⋆ ملفات السورس ↓\n◤━───━هكر مصر فرعون━───━◥\n\n"
-local TextE = "\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆ علامة تعني { ✔️ } ملف مفعل\n⋆ علامة تعني { ✖ } ملف معطل\n⋆ قناة سورس الصياد↓\n".."⋆ [اضغط هنا لدخول](t.me/source_frawn) \n"
+local TextS = "\n⋆ اهلا بك في متجر ملفات سيطره\n⋆ ملفات السورس ↓\n◤━───━هكر مصر فرعون━───━◥\n\n"
+local TextE = "\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆ علامة تعني { ✔️ } ملف مفعل\n⋆ علامة تعني { ✖ } ملف معطل\n⋆ قناة سورس سيطره↓\n".."⋆ [اضغط هنا لدخول](t.me/s_aytra) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -7133,7 +7121,7 @@ os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
 dofile('VENOM.lua')  
 else
-send(msg.chat_id_, msg.id_,"⋆ عذرا الملف لايدعم سورس الصياد\n") 
+send(msg.chat_id_, msg.id_,"⋆ عذرا الملف لايدعم سورس سيطره\n") 
 end
 return false
 end
@@ -7155,7 +7143,7 @@ chek:close()
 send(msg.chat_id_, msg.id_,t) 
 dofile('VENOM.lua')  
 else
-send(msg.chat_id_, msg.id_,"⋆ عذرا الملف لايدعم سورس الصياد\n") 
+send(msg.chat_id_, msg.id_,"⋆ عذرا الملف لايدعم سورس سيطره\n") 
 end
 return false
 end
@@ -7317,7 +7305,7 @@ end
 
 if text == 'قائمه المالك' and Sudo(msg) then
 local list = bot_data:smembers(ban_id..'CoSu'..msg.chat_id_)
-t = "\n⋆ قائمه المالك\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمه المالك\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7334,7 +7322,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = bot_data:smembers(ban_id..'CoSu'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7501,7 +7489,7 @@ st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..tok
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = bot_data:smembers(ban_id.."Basic:Constructor"..msg.chat_id_)
-t = "⋆ المنشئين الاساسين تعالو مخرب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "⋆ المنشئين الاساسين تعالو مخرب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7523,7 +7511,7 @@ Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..t
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = bot_data:smembers(ban_id.."Basic:Constructor"..msg.chat_id_)
-t = "⋆ المنشئين الاساسين تعالو مخرب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "⋆ المنشئين الاساسين تعالو مخرب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7630,7 +7618,7 @@ return false
 end
 if text == 'المنشئين الاساسين' and CoSu(msg) then
 local list = bot_data:smembers(ban_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n⋆ قائمة المنشئين الاساسين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المنشئين الاساسين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7647,7 +7635,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = bot_data:smembers(ban_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7663,7 +7651,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("المطورين") and Devban(msg) then
 local list = bot_data:smembers(ban_id..'Sudo:User')
-t = "\n⋆  قائمة مطورين البوت \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆  قائمة مطورين البوت \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7835,7 +7823,7 @@ end
 
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = bot_data:smembers(ban_id..'Constructor'..msg.chat_id_)
-t = "\n⋆ قائمة المنشئين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المنشئين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7851,7 +7839,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = bot_data:smembers(ban_id..'Constructor'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -7879,7 +7867,7 @@ end
 if b.username_ then
 UserName = b.username_
 else
-UserName = 'source_frawn'
+UserName = 's_aytra'
 end
 local Text = "⋆ منشئ الجروب  ⤌ ["..b.first_name_.."](tg://user?id="..b.id_..")\n"..getbio(b.id_):gsub('لايوجد','')
 local msg_id = msg.id_/2097152/0.5
@@ -8069,7 +8057,7 @@ send(msg.chat_id_, msg.id_, texts)
 end
 if text == ("المدراء") and Constructor(msg) then
 local list = bot_data:smembers(ban_id..'Manager'..msg.chat_id_)
-t = "\n⋆ قائمة المدراء \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المدراء \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8085,7 +8073,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = bot_data:smembers(ban_id..'Manager'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8310,7 +8298,7 @@ local name = json.result.first_name
 if json.result.username then
 username = json.result.username
 else
-username = 'source_frawn'
+username = 's_aytra'
 end
 local Name = '〈 المساعد 〉 -  '..name..'\n'
 keyboard = {} 
@@ -8408,7 +8396,7 @@ return false
 end
 if text == ("الثانوين") and SudoBot(msg) then
 local list = bot_data:smembers(ban_id.."Dev:ban:2")
-t = "\n⋆  قائمة مطورين الثانويين للبوت \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆  قائمة مطورين الثانويين للبوت \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8751,7 +8739,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح الادمنيه')
 end
 if text == ("الادمنيه") and Manager(msg) then
 local list = bot_data:smembers(ban_id..'Mod:User'..msg.chat_id_)
-t = "\n⋆ قائمة الادمنيه \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة الادمنيه \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -8767,7 +8755,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = bot_data:smembers(ban_id..'Mod:User'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9279,7 +9267,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Special:User'..msg.chat_id_)
-t = "\n⋆ قائمة مميزين الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة مميزين الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9295,7 +9283,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = bot_data:smembers(ban_id..'Special:User'..msg.chat_id_)
-t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ وينكم تعالو يريدوكم بالجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9539,7 +9527,7 @@ end
 -----------------------------------------------------
 if text == "زوجتي" or text == "مراتي" and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Mode:User'..msg.chat_id_)
-t = "\n⋆ قائمه زوجات الجروب \n⋆ ═───═❲[𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌](t.me/source_frawn)❳═───═??\n"
+t = "\n⋆ قائمه زوجات الجروب \n⋆ ═───═❲[𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](t.me/s_aytra)❳═───═??\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9590,7 +9578,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح جميع الكلاب')
 end
 if text == ("تاك للكلاب") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Modde:User'..msg.chat_id_)
-t = "\n⋆ قائمه كلاب الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمه كلاب الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9659,7 +9647,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع حمير من الجر
 end
 if text == ("تاك للحمير") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Sakl:User'..msg.chat_id_)
-t = "\n⋆ قائمة حمير الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة حمير الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9729,7 +9717,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع وتكات الجرو�
 end
 if text == ("تاك للوتكات") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Motte:User'..msg.chat_id_)
-t = "\n⋆ قائمة وتكات الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة وتكات الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9798,7 +9786,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع القرده بالج�
 end
 if text == ("تاك للقرود") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Motee:User'..msg.chat_id_)
-t = "\n⋆ قائمة القرود الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة القرود الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9867,7 +9855,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع الارامل بال�
 end
 if text == ("تاك للارامل") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Bro:User'..msg.chat_id_)
-t = "\n⋆ قائمة ارامل الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة ارامل الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -9936,7 +9924,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع الخولات بال�
 end
 if text == ("تاك للخولات") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Girl:User'..msg.chat_id_)
-t = "\n⋆ قائمة خولات الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة خولات الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10005,7 +9993,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع البقرات بال�
 end
 if text == ("تاك للبقرات") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Bakra:User'..msg.chat_id_)
-t = "\n⋆ قائمة البقرات الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة البقرات الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10074,7 +10062,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع المزز بالجر�
 end
 if text == ("تاك للمزز") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Tele:User'..msg.chat_id_)
-t = "\n⋆ قائمة مزز الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة مزز الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10143,7 +10131,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للاكساس") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة كساس الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة كساس الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10211,7 +10199,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع القلوب ')
 end
 if text == ("تاك لقلبي") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة القلوب في الجروب\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة القلوب في الجروب\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10280,7 +10268,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع أولادي')
 end
 if text == ("تاك لولادي") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة كساس الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة كساس الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10349,7 +10337,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك لبناتي") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة بناتي الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة بناتي الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10418,7 +10406,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للخاينين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة الخاينين الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة الخاينين الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10487,7 +10475,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة رقاصات الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة رقاصات الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10519,7 +10507,7 @@ end
 function start_function(extra, result, success)
 bot_data:sadd(ban_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 local statuss = '\n⋆ تم رفع رقاصه في الجروب\n⋆ مبقتش شريفه لا اله الي الله'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -10541,7 +10529,7 @@ end
 function start_function(extra, result, success)
 bot_data:srem(ban_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status = '\n⋆ تم تنزيل رقاصه من الجروب\n⋆ بقت شريفه لا اله الي الله'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -10556,7 +10544,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع جريزي')
 end
 if text == ("تاك للمتناكين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Jred:User'..msg.chat_id_)
-t = "\n⋆ قائمة المتناكين الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المتناكين الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10588,7 +10576,7 @@ end
 function start_function(extra, result, success)
 bot_data:sadd(ban_id..'Jred:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 local statuss = '\n⋆ تم رفع الـعـضو  علي زبك بنجاح\n⋆ تفضل ابدا نيك'
 send(msg.chat_id_, msg.id_, usertext..statuss)
 end,nil)
@@ -10610,7 +10598,7 @@ end
 function start_function(extra, result, success)
 bot_data:srem(ban_id..'Jred:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 'source_frawn')..')'
+usertext = '\n⋆ الـعـضو⤌['..data.first_name_..'](t.me/'..(data.username_ or 's_aytra')..')'
 status = '\n⋆ تم تنزيل الـعـضو  من زبك\n⋆ هيفضل متناك بردو'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -10625,7 +10613,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح كل الحكاكين')
 end
 if text == ("تاك للحكاكين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة حكاكين الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة حكاكين الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10693,7 +10681,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح كل النسوان بالجروب'
 end
 if text == ("تاك للنسوان") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Girl:User'..msg.chat_id_)
-t = "\n⋆ قائمة نسوان الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة نسوان الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10761,7 +10749,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح جميع المتزوجين')
 end
 if text == ("تاك للمتزوجين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Mode:User'..msg.chat_id_)
-t = "\n⋆ قائمه ازواج الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمه ازواج الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10830,7 +10818,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم تنزيل جميع االاكساس')
 end
 if text == ("تاك للميتنين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Zahf:User'..msg.chat_id_)
-t = "\n⋆ قائمة الميتنين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة الميتنين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -10898,7 +10886,7 @@ send(msg.chat_id_, msg.id_, '\n⋆ تم مسح المحظورين')
 end
 if text == ("المحظورين") then
 local list = bot_data:smembers(ban_id..'DRG:User'..msg.chat_id_)
-t = "\n⋆ قائمة محظورين الجروب \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة محظورين الجروب \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -11138,7 +11126,7 @@ send(msg.chat_id_, msg.id_, '⋆ تم مسح المكتومين')
 end
 if text == ("المكتومين") and Mod(msg) then
 local list = bot_data:smembers(ban_id..'Muted:User'..msg.chat_id_)
-t = "\n⋆ قائمة المكتومين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المكتومين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 local username = bot_data:get(ban_id.."user:Name" .. v)
 if username then
@@ -12192,12 +12180,12 @@ kickme = '✘'
 end
 NUM_MSG_MAX = bot_data:hget(ban_id.."flooding:settings:"..msg.chat_id_,"floodmax") or 0
 local text = 
-'\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+'\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n⋆ اعدادات الجروب كتالي √↓'..
-'\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+'\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n⋆  علامة ال {✓} تعني مفعل'..
 '\n⋆  علامة ال {✘} تعني معطل'..
-'\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+'\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n⋆  الروابط  ⤌ { '..lock_links..
 ' }\n'..'⋆  المعرفات  ⤌ { '..lock_user..
 ' }\n'..'⋆  التاك  ⤌ { '..lock_hash..
@@ -12208,7 +12196,7 @@ local text =
 ' }\n'..'⋆  الماركدون  ⤌ { '..lock_mark..
 ' }\n'..'⋆  التعديل  ⤌ { '..lock_edit..
 ' }\n'..'⋆  تعديل الميديا  ⤌ { '..lock_edit_med..
-' }\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+' }\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n'..'⋆  الكلايش  ⤌ { '..lock_spam..
 ' }\n'..'⋆  الكيبورد  ⤌ { '..lock_inlin..
 ' }\n'..'⋆  الاغاني  ⤌ { '..lock_vico..
@@ -12217,7 +12205,7 @@ local text =
 ' }\n'..'⋆  الدردشه  ⤌ { '..lock_text..
 ' }\n'..'⋆   الفيديو  ⤌ { '..lock_ved..
 ' }\n'..'⋆   الصور  ⤌ { '..lock_photo..
-' }\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+' }\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n'..'⋆   الصوت  ⤌ { '..lock_muse..
 ' }\n'..'⋆  الملصقات  ⤌ { '..lock_ste..
 ' }\n'..'⋆  الجهات  ⤌ { '..lock_phon..
@@ -12228,10 +12216,10 @@ local text =
 ' }\n'..'⋆  التكرار  ⤌ { '..flood..
 ' }\n'..'⋆  الترحيب  ⤌ { '..welcome..
 ' }\n'..'⋆  عدد التكرار  ⤌ { '..NUM_MSG_MAX..
-' }\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+' }\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n⋆  علامة ال {✓} تعني مفعل'..
 '\n⋆  علامة ال {✘} تعني معطل'..
-'\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗'..
+'\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔'..
 '\n'..'⋆  امر صيح  ⤌ { '..kickme..
 ' }\n'..'⋆  امر اطردني  ⤌ { '..sehuser..
 ' }\n'..'⋆  امر مين ضافك  ⤌ { '..addme..
@@ -12240,7 +12228,7 @@ local text =
 ' }\n'..'⋆  الايدي  ⤌ { '..idgp..
 ' }\n'..'⋆  الايدي بالصوره  ⤌ { '..idph..
 ' }\n'..'⋆  الرفع  ⤌ { '..setadd..
-' }\n'..'⋆  الحظر  ⤌ { '..DRGm..' }\n\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆ قناة سورس تيم الصياد↓\n━━━━━━━\n'
+' }\n'..'⋆  الحظر  ⤌ { '..DRGm..' }\n\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆ قناة سورس تيم سيطره↓\n━━━━━━━\n'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = 'اخفاء الاوامر', callback_data="/hide"}},}
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(text).."&reply_to_message_id=markdown&reply_markup="..JSON.encode(keyboard)) 
@@ -12349,13 +12337,13 @@ if text and text:match("^زخرفه (.*)$") and bot_data:get(ban_id.." ban:zhrf_
 local TextZhrfa = text:match("^زخرفه (.*)$")
 zh = https.request('https://mohamed40.ml/apiso/zkrfa.php?ban='..URL.escape(TextZhrfa))
 zx = JSON.decode(zh)
-t = "⋆ قائمه الزخرفه \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "⋆ قائمه الزخرفه \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 i = 0
 for k,v in pairs(zx.results) do
 i = i + 1
 t = t..i.."↝ `"..v.."`\n"
 end
-send(msg.chat_id_, msg.id_, t..'━━━━\nاضغط علي الزخرفه ليتم نسخه\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗')
+send(msg.chat_id_, msg.id_, t..'━━━━\nاضغط علي الزخرفه ليتم نسخه\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔')
 end
 if text == "ضع رابط" or text == 'وضع رابط' then
 if msg.reply_to_message_id_ == 0  and Mod(msg) then  
@@ -12713,7 +12701,7 @@ end
 
 if text == "قائمه المنع" and Manager(msg) then   
 local list = bot_data:smembers(ban_id.."VENOM1:List:Filter"..msg.chat_id_)  
-t = "\n⋆ قائمة المنع \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة المنع \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do  
 local VENOM_Msg = bot_data:get(ban_id.."VENOM1:Add:Filter:Rp2"..v..msg.chat_id_)   
 t = t..""..k.."- "..v.." ⤌ {"..VENOM_Msg.."}\n"    
@@ -12858,7 +12846,7 @@ return false
 end
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = "\n⋆ قائمة البوتات الموجوده \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+text = "\n⋆ قائمة البوتات الموجوده \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -12877,7 +12865,7 @@ send(msg.chat_id_, msg.id_, "⋆ لا توجد بوتات في الجروب")
 return false 
 end
 if #admins == i then 
-local a = '\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆ عدد البوتات التي هنا >> {'..n..'} بوت\n'
+local a = '\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆ عدد البوتات التي هنا >> {'..n..'} بوت\n'
 local f = '⋆ عدد البوتات التي هي ادمن >> {'..t..'}\n⋆ ملاحضه علامة ال (⋆ ) تعني ان البوت ادمن \n'
 send(msg.chat_id_, msg.id_, text..a..f)
 end
@@ -12966,7 +12954,7 @@ if #list == 0 then
 send(msg.chat_id_, msg.id_,'⋆ لا توجد صلاحيات مضافه')
 return false
 end
-t = "\n⋆ قائمة الصلاحيات المضافه \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+t = "\n⋆ قائمة الصلاحيات المضافه \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 for k,v in pairs(list) do
 var = bot_data:get(ban_id.."Comd:New:rt:bot:"..v..msg.chat_id_)
 if var then
@@ -13401,8 +13389,8 @@ msg_type = 'MSG:NewUser'
 end
 
 
-if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'الصياد').."" then  
-Namebot = (bot_data:get(ban_id..'Name:Bot') or 'الصياد')
+if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'سيطره').."" then  
+Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سيطره')
 local VENOM_Msg = {
 '⋆ يوه '..Namebot..' زهق منك😒',
 '⋆ نعم ياعيون '..Namebot..' 😻💓',
@@ -13428,7 +13416,7 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'الصياد') 
+local Namebot = (bot_data:get(ban_id..'Name:Bot') or 'سيطره') 
 local VENOM_Msg = { 
 'اسمي القميل '..Namebot..' يروحي..🥺♥️',
 'اسمي الكيوت '..Namebot..' يحياتي..🙈💞',
@@ -13767,7 +13755,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13777,7 +13765,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/19&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13787,7 +13775,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/comxnxp/20&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13798,7 +13786,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/comxnxp/21&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13810,7 +13798,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/94&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13821,7 +13809,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/93&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13832,7 +13820,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendsticker?chat_id=' .. msg.chat_id_ .. '&sticker=https://t.me/D_V1_D/95&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13844,7 +13832,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/D_V1_D/96&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -13954,7 +13942,7 @@ PRo = '❴ ✔️ ❵'
 else
 PRo = '❴ ✖ ❵'
 end 
-send(msg.chat_id_, msg.id_,'\n⋆ صلاحيات البوت هي\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆  علامة ال {✔️} تعني مفعل\n⋆  علامة ال {✖} تعني غير مفعل\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆ تغير معلومات المجموعة ↞ '..INf..'\n⋆ مسح الرسائل ↞ '..DEL..'\n⋆ حظر المستخدمين ↞ '..REs..'\n⋆ دعوة المستخدمين ↞ '..INv..'\n⋆ ثتبيت الرسالة ↞ '..Pin..'\n⋆ اضافة مشرفين ↞ '..PRo)   
+send(msg.chat_id_, msg.id_,'\n⋆ صلاحيات البوت هي\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆  علامة ال {✔️} تعني مفعل\n⋆  علامة ال {✖} تعني غير مفعل\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆ تغير معلومات المجموعة ↞ '..INf..'\n⋆ مسح الرسائل ↞ '..DEL..'\n⋆ حظر المستخدمين ↞ '..REs..'\n⋆ دعوة المستخدمين ↞ '..INv..'\n⋆ ثتبيت الرسالة ↞ '..Pin..'\n⋆ اضافة مشرفين ↞ '..PRo)   
 end
 end
 if text == "تعطيل الانستا" and Manager(msg) then
@@ -13995,7 +13983,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end 
-local t = "\n⋆ المستخدم ~ ["..User_id .."] يصيح المشرفين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+local t = "\n⋆ المستخدم ~ ["..User_id .."] يصيح المشرفين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 k = 0
 for i,v in pairs(data.members_) do
 if ban_id ~= v.user_id_ then 
@@ -14021,7 +14009,7 @@ User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
 end 
-local t = "\n⋆ المستخدم ~ ["..User_id .."] يصيح المشرفين \n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n"
+local t = "\n⋆ المستخدم ~ ["..User_id .."] يصيح المشرفين \n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n"
 k = 0
 for i,v in pairs(data.members_) do
 if ban_id ~= v.user_id_ then 
@@ -14049,7 +14037,7 @@ local ramsesj20 =  "\n التاريخ : "..os.date("%Y/%m/%d")
 send(msg.chat_id_, msg.id_,ramsesj20)
 end
 --------------
-if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'الصياد').." غادر" or text == 'غادر' and Sudo(msg) then     
+if text == ""..(bot_data:get(ban_id..'Name:Bot') or 'سيطره').." غادر" or text == 'غادر' and Sudo(msg) then     
 if Sudo(msg) and not bot_data:get(ban_id..'Left:Bot'..msg.chat_id_)  then 
 if not Bot(msg) then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=ban_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
@@ -14257,7 +14245,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,r
 if result.username_ then
 username = result.username_ 
 else
-username = 'source_frawn'
+username = 's_aytra'
 end
 local msg_id = msg.id_/2097152/0.5  
 local textt = ' ❤️ انت يا قلبي '..Rutba(msg.sender_user_id_,msg.chat_id_)
@@ -14565,7 +14553,7 @@ local List = {
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰??🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗖𝗛 - 『@source_frawn』⋆ .
+𖤍 |↶ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14574,7 +14562,7 @@ local List = {
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗖𝗛 - 『@source_frawn』⋆ .
+𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -14582,21 +14570,21 @@ local List = {
 🇪🇬≪💎≫ #id  • メ
 ??🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗖𝗛 - 『@source_frawn』 💞.
+🇪🇬𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
  𝙸𝙳  ??𓄼 #id 
  𝚂𝚃𝙰 𓄹𓄼 #stast 
  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
- 𝗖𝗛 - 『@source_frawn』 ??.
+ 𝗖𝗛 - 『@s_aytra』 ??.
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 ??➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗖𝗛 - 『@source_frawn』 💞.
+𓅓➪ : 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -14604,14 +14592,14 @@ local List = {
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 『@source_frawn』 💞.
+- 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞?? †: #id 𓀀 .
-𓁷 - 𝗖𝗛 - 『@source_frawn』 💞.
+𓁷 - 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
@@ -14619,7 +14607,7 @@ local List = {
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 𝐄𝐃𝐈𝐓 #edit
-𖡋 𝗖𝗛 - 『@source_frawn』⋆ .
+𖡋 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -14627,7 +14615,7 @@ local List = {
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗖𝗛 - 『@source_frawn』⋆ .
+𖤂 ~ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
@@ -14636,14 +14624,14 @@ local List = {
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - 『@source_frawn』⋆ .
+ ࿕ ¦• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗖𝗛 - 『@source_frawn』⋆ .
+► 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -14651,14 +14639,14 @@ local List = {
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   ??𝗛 - 『@source_frawn』 🇪🇬 ꙰.
+-›   ??𝗛 - 『@s_aytra』 🇪🇬 ꙰.
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗖𝗛 🇪🇬 ꙰  『@source_frawn』 💞.
+- 𝗖𝗛 🇪🇬 ꙰  『@s_aytra』 💞.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14667,14 +14655,14 @@ local List = {
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗖𝗛 - 『@source_frawn』⋆ .
+🇪🇬 - 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗖𝗛 - 『@source_frawn』⋆ .
+- 𓏬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -14682,28 +14670,28 @@ local List = {
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 『@source_frawn』⋆ .
+ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ⋆ •𝐮𝐬𝐞𝐫 : #username 𖣬  
 ⋆ •𝐦𝐬𝐠  : #msgs 𖣬 
 ⋆ •𝐬𝐭𝐚 : #stast 𖣬 
 ⋆ •𝐢𝐝  : #id 𖣬
-⋆ •𝗖𝗛 - 『@source_frawn』⋆ .
+⋆ •𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗖𝗛 - 『@source_frawn』⋆ .
+- 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗖𝗛 - 『@source_frawn』⋆ .
+- 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 - 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -14711,14 +14699,14 @@ local List = {
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗖𝗛 - 『@source_frawn』⋆ .
+- 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 『@source_frawn』⋆ .
+⌔➺: 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -14727,28 +14715,28 @@ local List = {
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝??   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗖𝗛 - 『@source_frawn』⋆ .
+🇪🇬 ꙰  - 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗖𝗛 - 『@source_frawn』⋆ .
+🌯 ¦ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪??.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - 『@source_frawn』⋆ .
+¦• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝒖??𝒆𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: 𝐢𝐝 𓂅 #id 𓍯➸💞.
-➞: 𝗖𝗛 - 『@source_frawn』 💞.
+➞: 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ➼ : ??𝐷 𖠀 #id . ♡
@@ -14756,14 +14744,14 @@ local List = {
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖𝗛 - 『@source_frawn』⋆ .
+➼ : 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - 『@source_frawn』⋆ .
+▽ ¦❀• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -14771,14 +14759,14 @@ local List = {
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - 『@source_frawn』⋆ .
+• ❉ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 |USERNAME #username 𓃚
 | YOUR -ID - #id 𓃚
 | STAS-#stast 𓃚
  | MSAG - #msgs 𓃚
- | 𝗖𝗛 - 『@source_frawn』⋆ .
+ | 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -14786,14 +14774,14 @@ local List = {
 𝟔𝟔𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗖𝗛 - 『@source_frawn』⋆ .
+𝟔𝟔𝟔 𖡋 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 『@source_frawn』⋆ .
+⌔➺: 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ⋆ - 𝓾𝓼𝓮𝓻 ➪ #username⋆ .
@@ -14801,42 +14789,42 @@ local List = {
 ⋆ - 𝓲𝓭 ➪ #id ⸙⋆ .
 ⋆ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙⋆ .
 ⋆ - 𝓶𝓼𝓰𝓼 ➪ #msgs⋆ .
-⋆ - 𝗖𝗛 - 『@source_frawn』⋆ .
+⋆ - 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ .
+ - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
-◣: 𝗖𝗛 - 『@source_frawn』⋆ .
+◣: 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - 『@source_frawn』⋆ .
+↣• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ➫✿: S #stast ??➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗖𝗛 - 『@source_frawn』⋆ .
+➫✿: 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝐢𝐝 𓂅 #id ??↝❃.
-✶- 𝗖𝗛 - 『@source_frawn』⋆ .
+✶- 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -14847,14 +14835,14 @@ local List = {
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 『@source_frawn』⋆ .
+• 🖤 | 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - 『@source_frawn』 💞.
+• 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -14864,7 +14852,7 @@ local List = {
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - 『@source_frawn』 💞.
+- 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
@@ -14873,7 +14861,7 @@ local List = {
 ⚕𝙄𝘿 : #id
 ⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - 『@source_frawn』 💞.
+⚕𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -14881,7 +14869,7 @@ local List = {
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - 『@source_frawn』 💞.
+• 🦄 | 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -14889,7 +14877,7 @@ local List = {
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - 『@source_frawn』 💞.
+• ❏ | 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -14897,7 +14885,7 @@ local List = {
 ┇MsG ➺ #msgs 🧸 
 ┇StAtE ➺ #stast 🎀
 ┇EdIT ➺ #edit  💒
-┇𝗖𝗛 - 『@source_frawn』⋆ .
+┇𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
@@ -14905,7 +14893,7 @@ local List = {
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 『@source_frawn』⋆ .
+• 🖤 | 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ┄─━━⋆ ━━─┄
@@ -14916,14 +14904,14 @@ local List = {
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━⋆ ━━─┄
-✰ 𝗖𝗛 - 『@source_frawn』⋆ .
+✰ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - 『@source_frawn』 💞.
+𓄼 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -14931,7 +14919,7 @@ local List = {
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-• ﮼ تعين ➺ 『@source_frawn』 💞.
+• ﮼ تعين ➺ 『@s_aytra』 💞.
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -14939,7 +14927,7 @@ local List = {
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - 『@source_frawn』 💞.
+‌‎⿻┊‌‎𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ⌾ | 𝐢𝐝  𓃠 #id .
@@ -14947,7 +14935,7 @@ local List = {
 ⌾ | 𝐦𝐬𝐠 𓃠 #msgs .
 ⌾ | 𝐬??𝐚 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - 『@source_frawn』 💞.
+⌾ | 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -14955,49 +14943,49 @@ local List = {
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - 『@source_frawn』 💞.
+♡ : 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - 『@source_frawn』 💞.
+•𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - 『@source_frawn』 💞.
+• 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪?? - #msgs
-𝗖𝗛☤🇪🇬 - 『@source_frawn』⋆ .
+𝗖𝗛☤🇪🇬 - 『@s_aytra』⋆ .
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - 『@source_frawn』 💞.
+⭐️𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - 『@source_frawn』⋆ .
+• 🇪🇬 - 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗖𝗛 - 『@source_frawn』 💞.
+• 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ??🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -15005,7 +14993,7 @@ local List = {
 🇪?? - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ .
+🇪🇬 - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -15013,14 +15001,14 @@ local List = {
 𓄼🇪🇬 𝐢𝐝 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ .
+𓄼🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖𝗛 - 『@source_frawn』 💞.
+𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -15028,7 +15016,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ .
+- 🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
@@ -15036,7 +15024,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - ?? id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪?? - 𝄬 𝗖𝗛 - 『@source_frawn』 💞.
+🇪?? - 𝄬 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
@@ -15044,28 +15032,28 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗖𝗛 - 『@source_frawn』 💞.
+金 - 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗖𝗛 - 『@source_frawn』 💞.
+➜𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ⌔┇Msgs : #msgs.
 ⌔┇ID : #id.
 ⌔┇Stast : #stast.
 ⌔┇UserName : #username.
-⌔┇𝗖𝗛 - 『@source_frawn』 💞.
+⌔┇𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
 𝐢𝐝 𓂅 #id 𓍯
-𓂅 𝗖𝗛 - 『@source_frawn』 💞.
+𓂅 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -15073,7 +15061,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂??𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ .
+- 🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -15081,7 +15069,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
-ᯓ 𝗖𝗛 - 『@source_frawn』⋆ .
+ᯓ 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -15089,14 +15077,14 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗖𝗛 - 『@source_frawn』 💞.
+.𖣂 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪🇬.
 ➥• MSG 𖥳 #msgs  - 🇪🇬.
 ➥• STA 𖦹 #stast - 🇪🇬.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - 『@source_frawn』⋆ .
+➥• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -15104,14 +15092,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ .
+👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
-➭- 𝗖𝗛 - 『@source_frawn』 💞.
+➭- 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -15119,7 +15107,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐??𝒆 𓀃.
-𓄼 𝗖𝗛 - 『@source_frawn』⋆ .
+𓄼 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -15128,7 +15116,7 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗖𝗛 - 『@source_frawn』⋆ .
+𝐓𝐓• 𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -15136,7 +15124,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - 『@source_frawn』 💞.
+𝟓 𝟔 𖡻 𝗖𝗛 - 『@s_aytra』 💞.
 ]],
 [[
 ༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
@@ -15146,7 +15134,7 @@ Msᴀɢ ~ #msgs
 • |𝗠𝗦𝗚  ⁞ #edit
 • |𝗔𝗨𝗧𝗢 ⁞ #auto
 —————————————
-𝗖𝗛 - 『@source_frawn』⋆ .
+𝗖𝗛 - 『@s_aytra』⋆ .
 ]],
 [[
 ┄─━━𖦹━━─┄
@@ -15157,14 +15145,14 @@ Msᴀɢ ~ #msgs
 ??𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
 𖣰𖡻 𖡋𝗘𝗗𝗜𝗧• #edit • 𓀎
 ┄─━━𖦹━━─┄
-𝗖𝗛 - 『@source_frawn』  𖦹 .
+𝗖𝗛 - 『@s_aytra』  𖦹 .
 ]],
 [[
 𖤍 |↶ #id    ꙰🇪🇬.
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗖𝗛 - 『@source_frawn』⋆ 
+𖤍 |↶ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15173,7 +15161,7 @@ Msᴀɢ ~ #msgs
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗖𝗛 - 『@source_frawn』⋆ 
+𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -15181,21 +15169,21 @@ Msᴀɢ ~ #msgs
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗖𝗛 - 『@source_frawn』⋆ 
+🇪🇬𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
  𝚄𝚂𝙴?? 𓄹𓄼 #username
  𝙸𝙳  𓄹𓄼 #id 
  𝚂𝚃𝙰 𓄹𓄼 #stast 
  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
- 𝗖𝗛 - 『@source_frawn』⋆ 
+ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 𓅓➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗖𝗛 - 『@source_frawn』⋆ 
+𓅓➪ : 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -15203,14 +15191,14 @@ Msᴀɢ ~ #msgs
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
-𓁷 - 𝗖𝗛 - 『@source_frawn』⋆ 
+𓁷 - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
@@ -15218,7 +15206,7 @@ Msᴀɢ ~ #msgs
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
 𖡋 𝐄𝐃𝐈𝐓 #edit
-𖡋 𝗖𝗛 - 『@source_frawn』⋆ 
+𖡋 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -15226,7 +15214,7 @@ Msᴀɢ ~ #msgs
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗖𝗛 - 『@source_frawn』⋆ 
+𖤂 ~ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -15234,7 +15222,7 @@ Msᴀɢ ~ #msgs
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼??𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   𝗖𝗛 - 『@source_frawn』 🇪🇬 ꙰.
+-›   𝗖𝗛 - 『@s_aytra』 🇪🇬 ꙰.
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
@@ -15243,21 +15231,21 @@ Msᴀɢ ~ #msgs
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - 『@source_frawn』⋆ 
+ ࿕ ¦• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜?? #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗖𝗛 - 『@source_frawn』⋆ 
+► 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗖𝗛 🇪🇬 ꙰  『@source_frawn』⋆ 
+- 𝗖𝗛 🇪🇬 ꙰  『@s_aytra』⋆ 
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15266,14 +15254,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗖𝗛 - 『@source_frawn』⋆ 
+🇪🇬 - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𓏬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -15281,28 +15269,28 @@ Msᴀɢ ~ #msgs
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 『@source_frawn』⋆ 
+ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⋆ •𝐮𝐬𝐞𝐫 : #username 𖣬  
 ⋆ •𝐦??𝐠  : #msgs 𖣬 
 ⋆ •𝐬𝐭𝐚 : #stast 𖣬 
 ⋆ •𝐢𝐝  : #id 𖣬
-⋆ •𝗖𝗛 - 『@source_frawn』⋆ 
+⋆ •𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - ??𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -15310,14 +15298,14 @@ Msᴀɢ ~ #msgs
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗖𝗛 - 『@source_frawn』⋆ 
+🌯 ¦ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -15326,28 +15314,28 @@ Msᴀɢ ~ #msgs
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗖𝗛 - 『@source_frawn』⋆ 
+🇪🇬 ꙰  - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 『@source_frawn』⋆ 
+⌔➺: 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦• 𝙼??𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - 『@source_frawn』⋆ 
+¦• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: ??𝒅 𓂅 #id 𓍯➸💞.
-➞: 𝗖𝗛 - 『@source_frawn』⋆ 
+➞: 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ➼ : 𝐼𝐷 𖠀 #id . ♡
@@ -15355,14 +15343,14 @@ Msᴀɢ ~ #msgs
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗖𝗛 - 『@source_frawn』⋆ 
+➼ : 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - 『@source_frawn』⋆ 
+▽ ¦❀• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -15370,14 +15358,14 @@ Msᴀɢ ~ #msgs
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄??𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - 『@source_frawn』⋆ 
+• ❉ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 |USERNAME #username 𓃚
 | YOUR -ID - #id 𓃚
 | STAS-#stast 𓃚
  | MSAG - #msgs ??
- | 𝗖𝗛 - 『@source_frawn』⋆ 
+ | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -15385,14 +15373,14 @@ Msᴀɢ ~ #msgs
 𝟔??𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗖𝗛 - 『@source_frawn』⋆ 
+𝟔𝟔𝟔 𖡋 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗖𝗛 - 『@source_frawn』⋆ 
+⌔➺: 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⋆ - 𝓾𝓼𝓮𝓻 ➪ #username⋆ .
@@ -15400,42 +15388,42 @@ Msᴀɢ ~ #msgs
 ⋆ - 𝓲𝓭 ➪ #id ⸙⋆ .
 ⋆ - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙ ??.
 ⋆ - 𝓶𝓼𝓰𝓼 ➪ #msgs⋆ .
-⋆ - 𝗖𝗛 - 『@source_frawn』⋆ 
+⋆ - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝐮𝐬𝐞𝐫𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝐢𝐝 𓂅 #id 𓍯➥♡.
-◣: 𝗖𝗛 - 『@source_frawn』⋆ 
+◣: 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ 
+ - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - 『@source_frawn』 🍬
+↣• 𝗖𝗛 - 『@s_aytra』 🍬
 ]],
 [[
 ➫✿: S #stast 𓍯➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗖?? - 『@source_frawn』 ♡.
+➫✿: 𝗖?? - 『@s_aytra』 ♡.
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝐢𝐝 𓂅 #id 𓍯↝❃.
-✶- 𝗖𝗛 - 『@source_frawn』 ↝❃.
+✶- 𝗖𝗛 - 『@s_aytra』 ↝❃.
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -15446,14 +15434,14 @@ Msᴀɢ ~ #msgs
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - 『@source_frawn』⋆ 
+• 🖤 | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - 『@source_frawn』⋆ 
+• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 🌨↓Use ⇨ #username 🌨
@@ -15470,7 +15458,7 @@ Msᴀɢ ~ #msgs
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - 『@source_frawn』⋆ 
+- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍??𝘼𝙈𝙀 : #username
@@ -15479,7 +15467,7 @@ Msᴀɢ ~ #msgs
 ⚕𝙄𝘿 : #id
 ⚕??𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - 『@source_frawn』⋆ 
+⚕𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -15487,7 +15475,7 @@ Msᴀɢ ~ #msgs
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - 『@source_frawn』⋆ 
+• 🦄 | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -15495,7 +15483,7 @@ Msᴀɢ ~ #msgs
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - 『@source_frawn』⋆ 
+• ❏ | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -15503,21 +15491,21 @@ Msᴀɢ ~ #msgs
 ┇MsG ➺ #msgs 🧸 
 ┇StAtE ➺ #stast 🎀
 ┇EdIT ➺ #edit  💒
-┇𝗖𝗛 - 『@source_frawn』⋆ 
+┇𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - 『@source_frawn』⋆ 
+• 🖤 | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - 『@source_frawn』⋆ 
+𓄼 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -15525,7 +15513,7 @@ Msᴀɢ ~ #msgs
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - 『@source_frawn』⋆ 
+‌‎⿻┊‌‎𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -15533,7 +15521,7 @@ Msᴀɢ ~ #msgs
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-•  تعين ➺ 『@source_frawn』⋆ 
+•  تعين ➺ 『@s_aytra』⋆ 
 ]],
 [[
 ┄─━━⋆ ━━─┄
@@ -15544,7 +15532,7 @@ Msᴀɢ ~ #msgs
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━⋆ ━━─┄
-✰ 𝗖?? - 『@source_frawn』⋆ 
+✰ 𝗖?? - 『@s_aytra』⋆ 
 ]],
 [[
 ⌾ | 𝐢𝐝  𓃠 #id .
@@ -15552,7 +15540,7 @@ Msᴀɢ ~ #msgs
 ⌾ | 𝐦𝐬𝐠 𓃠 #msgs .
 ⌾ | 𝐬𝐭?? 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - 『@source_frawn』⋆ 
+⌾ | 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -15560,49 +15548,49 @@ Msᴀɢ ~ #msgs
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - 『@source_frawn』⋆ 
+♡ : 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - 『@source_frawn』⋆ 
+•𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - 『@source_frawn』⋆ 
+• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𝐘??𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - 『@source_frawn』⋆ 
+𝗖𝗛☤🇪🇬 - 『@s_aytra』⋆ 
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌?? : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - 『@source_frawn』⋆ 
+⭐️𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - ??𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - 『@source_frawn』⋆ 
+• 🇪🇬 - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗖𝗛 - 『@source_frawn』⋆ 
+• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ??🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -15610,14 +15598,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ 
+🇪🇬 - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦??𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔??𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗖𝗛 - 『@source_frawn』⋆ 
+➜𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -15625,21 +15613,21 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ 
+- 🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ⌔┇Msgs : #msgs.
 ⌔┇ID : #id.
 ⌔┇Stast : #stast.
 ⌔┇UserName : #username.
-⌔┇𝗖𝗛 - 『@source_frawn』⋆ 
+⌔┇𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𝒔𝒕𝒂?? #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎????𝒆𓂅 #msgs 𓍯
 𝐢𝐝 𓂅 #id 𓍯
-𓂅 𝗖𝗛 - 『@source_frawn』⋆ 
+𓂅 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -15647,21 +15635,21 @@ Msᴀɢ ~ #msgs
 𓄼🇪🇬 𝐢𝐝 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ 
+𓄼🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖?? - 『@source_frawn』⋆ 
+𝗖?? - 『@s_aytra』⋆ 
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪??.
 ➥• MSG 𖥳 #msgs  - ??🇬.
 ➥• STA 𖦹 #stast - 🇪??.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - 『@source_frawn』⋆ 
+➥• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  ??
@@ -15669,7 +15657,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ 
+🇪🇬 - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -15677,7 +15665,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗖𝗛 - 『@source_frawn』⋆ 
+.𖣂 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻??𝓪𝓶𝓮 . #username ⸙ 
@@ -15685,7 +15673,7 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗖𝗛 - 『@source_frawn』⋆ 
+金 - 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -15693,7 +15681,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢?? . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆?? . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - 『@source_frawn』⋆ 
+- 🇪🇬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -15701,7 +15689,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs ??🇬 ꙰
-ᯓ 𝗖𝗛 - 『@source_frawn』⋆ 
+ᯓ 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -15709,14 +15697,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@source_frawn』⋆ 
+👳🏼‍♂ - 𝄬 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝐮𝐬𝐞𝐫𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝐢𝐝 𓂅 #id 𓍯. 💕
-➭- 𝗖𝗛 - 『@source_frawn』⋆ 
+➭- 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -15724,7 +15712,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
-𓄼 𝗖𝗛 - 『@source_frawn』⋆ 
+𓄼 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -15733,14 +15721,14 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗖𝗛 - 『@source_frawn』⋆ 
+𝐓𝐓• 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ↑↓𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 ➱ #username⋆  
 ↑↓𝙄𝘿 ➱ #id
 ↑↓𝙍𝘼𝙉𝙆 ➱  #stast⋆  
 ↑↓𝙈𝘼𝙎𝙂 ➱ #msgs⋆  
-↑↓𝗖𝗛 ➯  『@source_frawn』⋆  
+↑↓𝗖𝗛 ➯  『@s_aytra』⋆  
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -15748,28 +15736,28 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗖𝗛 - 『@source_frawn』⋆ 
+𝟓 𝟔 𖡻 𝗖𝗛 - 『@s_aytra』⋆ 
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗶𝗗 - 『@source_frawn』 ☆
+► 𝗶𝗗 - 『@s_aytra』 ☆
 ]],
 [[
 - UsEr🇺🇸 ꙰ #username
 - StA🇺🇸 ꙰   #msgs
 - MsGs🇺🇸 ꙰ #stast
 - ID🇺🇸 ꙰  #id
-- 𝗶𝗗 🇺🇸 ꙰  『@source_frawn』 ☆
+- 𝗶𝗗 🇺🇸 ꙰  『@s_aytra』 ☆
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵🇷.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇵🇷.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇵🇷.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇵🇷.
-¦• 𝗶𝗗 - 『@source_frawn』 ☆
+¦• 𝗶𝗗 - 『@s_aytra』 ☆
 ]],
 [[
 - 🦋 UsErNaMe . #username 𖠲
@@ -15777,7 +15765,7 @@ Msᴀɢ ~ #msgs
 - 🦋 Id . #id 𖠲
 - 🦋 GaMeS . #game 𖠲
 - 🦋 MsGs . #msgs 𖠲
-- 🦋 𝗖𝗛 - 『@source_frawn』 ☆
+- 🦋 𝗖𝗛 - 『@s_aytra』 ☆
 ]]}
 local Text_Rand = List[math.random(#List)]
 bot_data:set(ban_id.."KLISH:ID"..msg.chat_id_,Text_Rand)
@@ -16437,7 +16425,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = 'رابط اونلاين', callback_data="/ven2"},{text = 'رابط بالصور', callback_data="/ven1"}},   
 {{text = 'رابط بنص', callback_data="/ven3"}},
-{{text = '• 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌♪', url="t.me/source_frawn"}},
+{{text = '• 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔♪', url="t.me/s_aytra"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -16557,7 +16545,7 @@ return false
 end
 local Teext =[[
 ⇊ اوامر القفل والفتح⋆ 
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 
 ]]
 keyboard = {} 
@@ -16627,7 +16615,7 @@ return false
 end
 local Teext =[[
 ⇊ 『اوامر التفعيل』 والتعطيل ⋆
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16706,10 +16694,10 @@ return false
 end
 local Teext =[[
 ⋆ ️ 『 m 1 』 Orders Protect Group ⇊
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Lock ↵Open + it
 ⋆ Lock ↵» Open 『 All 』
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Chat
 ⋆ Knows
 ⋆ Pictures
@@ -16734,13 +16722,13 @@ Mobile moving
 ⋆ towers
 ⋆ Meanings of names
 ⋆ Welcome
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Links
 ⋆ Guidance
 ⋆ popcorn
 ⋆ Bots
 ⋆ Prohibited
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 
 ]]
 keyboard = {} 
@@ -16763,38 +16751,38 @@ end
 local Teext =[[
 ⋆ 『 m 3 』 3⋆ Tall orders ⇊
 ⋆ Lifting ↵ Download + it
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ my son
 ⋆ Crown for children
 ⋆ Survey sons
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Crown for girls
 ⋆ Clear the girls
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
    ⋆ Habayeb survey..↑↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ my husDRGd
 ⋆ Crown for couples
 ⋆ Survey of couples
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ My wife
 ⋆ Crown for the wives
 ⋆ Wipe waves
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Khayen
 ⋆ Crown for him
 ⋆ Clear the moon
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Crown for the two
 ⋆ Khiennine survey
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Abit
 ⋆ Crown for the mixture
 ⋆ Survey
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Crown for Paradise
 ⋆ Storage survey
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 
 ]]
 keyboard = {} 
@@ -16816,14 +16804,14 @@ return false
 end
 local Teext =[[
 ⋆ 『 m 4 』 Orders of members ⇊
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Age account
 ⋆ Picture ↵
 ⋆ Quran
 ⋆ Settings
 ⋆ Qatari
 ⋆ Delete ↵ Sell 『 Qatari
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ My messages ↵ Delete 
 ⋆ Decorating ↵ Songs
 ⋆ Movies ↵ Cartoon
@@ -16831,7 +16819,7 @@ local Teext =[[
 ⋆ YouTube ↵ Games
 ⋆ Weather + area
 ⋆ Dark ↵link
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ My name is 
 ⋆ My Juices ↵ Delete my juices
 ⋆ Powers ↵ Ping
@@ -16840,7 +16828,7 @@ local Teext =[[
 ⋆ I am Maine
 ⋆ Say + word
 ⋆ Qatah ↵ dog
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Source ↵Developer
 ⋆ link ↵hands
 ⋆ Rank ↵ Revealed
@@ -16850,7 +16838,7 @@ local Teext =[[
 ⋆ Boso ↵ her pussy
 ⋆ Mido ↵ 
 ⋆ Delete link
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 
 ]]
 keyboard = {} 
@@ -16874,7 +16862,7 @@ local Teext =[[
 ⋆ مرحب بيك في اوامر للمطورين⋆ 
 اوامر المطورين ⇊
 『المطور 』  ⇊
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ تفعيل ⤌ تعطيل 
 ⋆ المجموعات ⤌ المشتركين ⤌ الاحصائيات
 ⋆ رفع ⤌ تنزيل منشئ اساسي
@@ -16882,9 +16870,9 @@ local Teext =[[
 ⋆ مسح المنشئين ⤌ المنشئين
 ⋆ اسم ~ ايدي + بوت غادر 
 ⋆ اذاعه 
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 『المطور الاساسي+ المطور الثانوي』
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ تفعيل
 ⋆ تعطيل
 ⋆ مسح الاساسين
@@ -16936,7 +16924,7 @@ local Teext =[[
 ⋆ المجموعات 
 ⋆ تفعيل/تعطيل المغادره
 ⋆ مسح الجروبات
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16957,7 +16945,7 @@ return false
 end
 local Teext =[[
     『اوامر الاعضاء ⇊』     
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆   غنيلي ⇔ حساب العمر   
 ⋆   صورتي ⇔ نسبه جمالي
 ⋆   نقاطي
@@ -16978,7 +16966,7 @@ local Teext =[[
 ⋆   بوسو ⇔ بوسها
 ⋆   بتحب دي ⇔ بتحب ده
 ⋆  بوت الحذف⇔رابط الحذف
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17000,56 +16988,56 @@ end
 local Teext =[[
 اوامر 『التسليه』  ⇊
 رفع ⇔ تنزيل + الامر
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ متوحد
 ⋆ تاك للمتوحدين
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ كلب
 ⋆ تاك للكلاب
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ قرد
 ⋆ تاك للقرود
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ زوجتي
 ⋆ تاك للزوجات
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ قلبي
 ⋆ تاك لقلبي
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ بقره
 ⋆ تاك للبقرات
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ ارمله
 ⋆ تاك للارامل
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ خول
 ⋆ تاك للخولات
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ حمار
 ⋆ تاك للحمير
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ مزه
 ⋆ تاك للمزز
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ وتكه
 ⋆ تاك للوتكات
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ كس
 ⋆ تاك للاكساس
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ ابني
 ⋆ تاك لولادي 
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ بنتي
 ⋆ تاك لبناتي
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع + تنزيل ⤌ خاين
 ⋆ تاك للخاينين
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ رفع  ⤌ علي زبي
 ⋆ تنزيل ⤌من زبي 
 ⋆ تاك للمتناكين
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17077,7 +17065,7 @@ end
 local Teext =[[
 ⋆ اهلا بك في قائمة اوامر البوت⤌ ⤈ 
 
-⋆ CH - [𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗](https://t.me/source_frawn)
+⋆ CH - [𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔](https://t.me/s_aytra)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17106,23 +17094,23 @@ end
 local Teext =[[
 ⋆ 『 m 5 』 Orders of developers ⇊
 ⋆ Developer ⤌⇊
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Lifting «download 『 owner 』
 ⋆ Change the group link
 ⋆ Destination of groups
 ⋆ Destination by guidance for groups
 ⋆ A radio face
 ⋆ Special radio
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ A special guidance
 ⋆ Fix the installation
 ⋆ bring back copy
 ⋆ raise its backup copy
 ⋆ Statistics
 ⋆ Delete owners
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
   ⋆ Basic Developer..↑↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Add "← Delete a general response
 ⋆ Lifting «download 『 special year 』
 ⋆ Featured Survey
@@ -17133,7 +17121,7 @@ local Teext =[[
 ⋆ Fix the installation
 ⋆ A radio face
 ⋆ bring ↵ raising 
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Statistics
 ⋆ Lifting «download 『 Developer 』
 ⋆ Developers ↵ Delete developers
@@ -17143,7 +17131,7 @@ local Teext =[[
 ⋆ General makers
 ⋆ Preventors General
 ⋆ Canceling the general
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 
 ]]
 keyboard = {} 
@@ -17162,35 +17150,35 @@ local help_text = bot_data:get(ban_id..'help10_text')
 local Teext =[[
 ⋆ 『 m 2 』 2⋆ entertainment orders ⇊
 ⋆ Lifting ↵» Download + it
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ and Take
 ⋆ Crown for Soutat
 ⋆ Wipe Wattat
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ 
 ⋆ Crown for drapes
 ⋆ Clear Docks
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Jeep
 ⋆ Crown for bodies
 ⋆ Scanning
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ animal
 ⋆ Crown for animals
 ⋆ Animals
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ failed
 ⋆ Crown for failure
 ⋆ Scan of failure
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Dermatology
 ⋆ Crown for perforation
 ⋆ Scanning
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆ Catte
 ⋆ Crown for cats
 ⋆ Cats survey
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17207,7 +17195,7 @@ end
 if Text == '/help90' then
 local Teext =[[
 ⋆ Welcome to the orders section↑↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17755,7 +17743,7 @@ keyboard.inline_keyboard = {
 {{text = 'لعبه كشف الكذب', callback_data="/help47"}},
 {{text = 'مريم', callback_data="/help36"},{text = 'عقاب', callback_data="/help42"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -17853,7 +17841,7 @@ end
 if Text == '/DRG' then
 local Teext =[[
 ⋆ مرحبا بيك في الالعاب  الالكترونيه ..↑↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17883,14 +17871,14 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/change-names' then
 local Teext =[[
     『اوامر الاعضاء ⇊』  
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ⋆   غنيلي ⇔ حساب العمر   
 ⋆   صورتي ⇔ نسبه جمالي
 ⋆   نقاطي
@@ -17911,7 +17899,7 @@ local Teext =[[
 ⋆   بوسو ⇔ بوسها
 ⋆   بتحب دي ⇔ بتحب ده
 ⋆  بوت الحذف⇔رابط الحذف
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
  
 ]]
 keyboard = {} 
@@ -17920,7 +17908,7 @@ keyboard.inline_keyboard = {
 {text = '◗القائمه الرائسيه◖', callback_data="/change-id"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17929,7 +17917,7 @@ if Text == '/change-id' then
 local Teext =[[
 ⋆ الاوامر الاعضاء ..↑↓
  تحت لي في الزر الأسفل↓
-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗
+𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17937,7 +17925,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17960,7 +17948,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = '◗القائمه الرائسيه◖', callback_data="/add"}},
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -18086,7 +18074,7 @@ keyboard.inline_keyboard = {
 {text = '◗ متطوره◖', callback_data="/DRG"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18122,7 +18110,7 @@ keyboard.inline_keyboard = {
 {text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
 },
 {
-{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖', url="t.me/source_frawn"},
+{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖', url="t.me/s_aytra"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18141,14 +18129,15 @@ local Teext =[[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ' ,callback_data="/frawn"},{text =    '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
+{{text =  '𝗗𝙀𝗩𝙀𝗟𝙊𝙋𝙀𝙍𝗦 ' ,callback_data="/frawn"}},
+{{text =    '𝗖𝗛 𝗦𝙊𝙐𝙍𝗖𝙀 ',callback_data="/frawn2"}},
 {{text = '◗اضافه البوت لمجمعتك◖', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/frawn3' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 ]]
@@ -18164,7 +18153,7 @@ end
 
 if Text == '/frawn4' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 ]]
@@ -18440,7 +18429,7 @@ local Teext =[[
 
 يتوافق مع : برج العقرب ، برج الحوت ،برج الجدي ،برج الثور
 
-الاعمال الملائمة : أطباء، صيادلة، مدرالصياد، أخصائيو تغذية، شيف، سماسرة
+الاعمال الملائمة : أطباء، صيادلة، مدرسيطره، أخصائيو تغذية، شيف، سماسرة
 
 ايجابيات برج السرطان : عاطفي، محب، صاحب حدس وبديهة، صاحب خيال واسع
 
@@ -18482,30 +18471,28 @@ end
 
 if Text =='/frawn' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text =  ' ˹𝐃𝐄𝐕 𝐅𝐑𝐀𝐖𝐍 ˼ ' ,url="t.me/DEV_FRAWN"},{text =' ˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼' ,url="t.me/frawnwbot"}}, 
-{{text = ' ˹𝐃𝐄𝐕 𝐄𝐋 𝐒𝐀𝐘𝐀𝐃˼ ',url="t.me/UU_ML1"},{text = '˹𝐓 𝐀 𝐖 𝐎 𝐒 𝐋˼',url="t.me/Seadfrbot"}},
-{{text = ' ˹𝐁 𝐀 𝐂 𝐊˼ ', callback_data="/frawn4"}},
+{{text = ' ˹𝙳𝙴𝚅 𝚂𝙰𝚈𝚃𝚁𝙰˼ ',url="t.me/P_I_C_A_T_C_H_U"},{text = '˹𝙳𝙴𝚅 𝙳𝙰𝚁𝙱𝙺𝙰˼',url="t.me/D_ARBKA12"}},
+{{text = ' ˹𝙱 𝙰 𝙲 𝙺˼ ', callback_data="/frawn4"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 
 if Text ==  '/frawn2' then
 local Teext =[[
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙴𝙻 𝚂𝙴𝙰𝙳
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝚂𝙰𝚈𝚃𝚁𝙰
 𝚃𝙷𝙴𝚂𝚃𝚁𝙾𝙽𝙶𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙸𝙽
 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = ' 🐬🦈الَصّـــــــ قُنِاةّـــــــــيِّادٍ🐬🦈 ',url="t.me/hornafsy123"}},
-{{text = ' 𖤍 𝘽𝙒𝙎𝙏𝘼𝙏 𖤍 ' ,url="t.me/source_frawn"}},
-{{text =  ' ˹ 𝐁 𝐀 𝐂 𝐊 ˼ ', callback_data="/frawn3"}},
+{{text = ' 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ' ,url="t.me/s_aytra"}},
+{{text =  ' ˹ 𝙱 𝙰 𝙲 𝙺 ˼ ', callback_data="/frawn3"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
@@ -20668,7 +20655,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -20681,7 +20668,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -20693,7 +20680,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -20703,7 +20690,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -20712,7 +20699,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -20720,20 +20707,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -20754,7 +20741,7 @@ end
 bot_data:srem(ban_id..'Ban:User'..Chat_id, userid)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = Chat_id, user_id_ = userid, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم الغاء حظره بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
@@ -20768,43 +20755,43 @@ return false
 end
 if bot_data:get(ban_id..'Lock:kick'..Chat_id) and not Constructor(data) then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *•  تم تعطيل الحظر*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
 if SudoBot (userid) then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*•  لا تستطيع (كتم،طرد،حظر،تققيد) مطور السورس او الاساسي*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
 if tonumber(userid) == tonumber(ban_id) then  
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *•  لا تسطيع حظر البوت* ")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
 if Can_or_NotCan(userid, Chat_id) == true then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n *•  عذرا لا تستطيع حظر* ( '..Rutba(userid,Chat_id)..' )')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = Chat_id, user_id_ = userid, status_ = { ID = "ChatMemberStatusKicked" },},function(arg,da) 
 if (da and da.code_ and da.code_ == 400 and da.message_ == "CHAT_ADMIN_REQUIRED") then 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(' *•  ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false  
 end
 if data.can_be_deleted_ == false then 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(' *•  البوت ليس ادمن يرجى ترقيتي !*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false  
 end
 bot_data:sadd(ban_id..'Ban:User'..Chat_id, userid)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم حظره بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 chat_kick(Chat_id, userid)
 end,nil)   
@@ -20821,13 +20808,13 @@ return false
 end
 if not bot_data:sismember(ban_id..'Muted:User'..Chat_id,userid) then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  الشخص غير مكتوم*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
 bot_data:srem(ban_id..'Muted:User'..Chat_id, userid)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم الغاء كتمه بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
@@ -20841,30 +20828,30 @@ return false
 end
 if tonumber(userid) == tonumber(ban_id) then  
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape( " *•  لا تسطيع كتم البوت* ")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false 
 end
 if SudoBot (userid) then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*•  لا تستطيع (كتم،طرد،حظر،تققيد) مطور السورس او الاساسي*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false 
 end
 if Can_or_NotCan(userid, Chat_id) == true then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n *•  عذرا لا تستطيع كتم* ( '..Rutba(userid,Chat_id)..' )')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 if data.can_be_deleted_ == false then 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(' *•  البوت ليس ادمن يرجى ترقيتي !*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false  
 end
 bot_data:sadd(ban_id..'Muted:User'..Chat_id, userid)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم كتمه بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 return false
@@ -20879,7 +20866,7 @@ return false
 end
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. Chat_id .. "&user_id=" .. userid .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم الغاء تقيبده بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
 end
@@ -20893,30 +20880,30 @@ return false
 end
 if tonumber(userid) == tonumber(ban_id) then  
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape( " *•  لا تسطيع تقييد البوت* ")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false 
 end
 if SudoBot (userid) then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*•  لا تستطيع (كتم،طرد،حظر،تققيد) مطور السورس او الاساسي*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false 
 end
 if Can_or_NotCan(userid, Chat_id) == true then
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n *•  عذرا لا تستطيع تقييد* ( '..Rutba(userid,Chat_id)..' )')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 if data.can_be_deleted_ == false then 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(' *•  البوت ليس ادمن يرجى ترقيتي !*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false  
 end
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..Chat_id.."&user_id="..userid)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},}
+keyboard.inline_keyboard = {{{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},}
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape('\n*•  تم تقييده بنجاح*')..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 return false
@@ -20990,7 +20977,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21003,7 +20990,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21015,7 +21002,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21025,7 +21012,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21034,7 +21021,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21042,20 +21029,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21137,7 +21124,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21150,7 +21137,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21162,7 +21149,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21172,7 +21159,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21181,7 +21168,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21189,20 +21176,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21279,7 +21266,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21292,7 +21279,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21304,7 +21291,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21314,7 +21301,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21323,7 +21310,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21331,20 +21318,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21421,7 +21408,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21434,7 +21421,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21446,7 +21433,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21456,7 +21443,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21465,7 +21452,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21473,20 +21460,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21563,7 +21550,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21576,7 +21563,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21588,7 +21575,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21598,7 +21585,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21607,7 +21594,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21615,20 +21602,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21705,7 +21692,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21718,7 +21705,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21730,7 +21717,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21740,7 +21727,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21749,7 +21736,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21757,20 +21744,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21847,7 +21834,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -21860,7 +21847,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -21872,7 +21859,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -21882,7 +21869,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -21891,7 +21878,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -21899,20 +21886,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -21989,7 +21976,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -22002,7 +21989,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -22014,7 +22001,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -22024,7 +22011,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -22033,7 +22020,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -22041,20 +22028,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -22132,7 +22119,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif msa3d (data) then
 datainline = {
@@ -22145,7 +22132,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Devban (data) then
 datainline = {
@@ -22157,7 +22144,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif CoSu (data) then
 datainline = {
@@ -22167,7 +22154,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif BasicConstructor(data) then
 datainline = {
@@ -22176,7 +22163,7 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Constructor(data) then
 datainline = {
@@ -22184,20 +22171,20 @@ datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Manager(data) then
 datainline = {
 {{text =Mo,callback_data=data.sender_user_id_.."unmod"..userid},{text = 'ادمن ',callback_data=data.sender_user_id_.."unmod"..userid}},
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 elseif Mod(data) then
 datainline = {
 {{text =Sp,callback_data=data.sender_user_id_.."unSpecial"..userid},{text = 'مميز ',callback_data=data.sender_user_id_.."unSpecial"..userid}},
 {{text = 'رجوع',callback_data=data.sender_user_id_.."uusioa"..userid}},
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 end
 bb = {} 
@@ -22272,7 +22259,7 @@ bot_data:del(ban_id..'Special:User'..msg.chat_id_)
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '-𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '-𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Vs)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 return false
@@ -22288,7 +22275,7 @@ end
 bot_data:sadd(ban_id.."Dev:ban:2", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*•  تم تنفيذ الامر بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
@@ -22304,7 +22291,7 @@ end
 bot_data:sadd(ban_id.."SirSudoGp", userid)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗', url="t.me/source_frawn"}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔', url="t.me/s_aytra"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("*• تم رفعه مطور ثانوي مجموعه*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))
 return false
@@ -22363,7 +22350,7 @@ bot_data:srem(ban_id..'S00F4:MN:TF'..msg.chat_id_, data.sender_user_id_)
 bot_data:srem(ban_id..'Special:User'..msg.chat_id_, data.sender_user_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ تم تنزيلك من جميع الرتب")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22374,13 +22361,13 @@ if bot_data:get(ban_id..'Set:array'..data.sender_user_id_..':'..Chat_id) == 'tru
 bot_data:del(ban_id..'Set:array'..data.sender_user_id_..':'..Chat_id)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22390,28 +22377,28 @@ tdcli_function({ID="ChangeChatMemberStatus",chat_id_=Chat_id,user_id_=data.sende
 if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if (data and data.code_ and data.code_ == 3) then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙البوت ليس ادمن يرجى ترقيتي !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙عذرا لا استطيع طرد ادمنية الكروب*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if data and data.ID and data.ID == 'Ok' then
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("⋆ ︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22421,7 +22408,7 @@ if Text == 'noKikedMe'..data.sender_user_id_ then
 local Text ="⋆ تم الغاء الأمر بنجاح "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22430,7 +22417,7 @@ bot_data:setex(ban_id.."Ss:Cs" .. Chat_id .. ":" .. data.sender_user_id_, 600, t
 local Text ="⋆ ارسل الاذاعة لارسلها الي الجروبات "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22439,7 +22426,7 @@ bot_data:setex(ban_id.."Send:Bc:Pv" .. Chat_id .. ":" .. data.sender_user_id_, 6
 local Text ="⋆ ارسل الاذاعة لارسلها الي الجروبات "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22448,7 +22435,7 @@ bot_data:setex(ban_id.."php_7_aza3h3" .. Chat_id .. ":" .. data.sender_user_id_,
 local Text ="⋆ ارسل الاذاعة لارسلها الي المطور الاساسي و المساعد "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22457,7 +22444,7 @@ bot_data:sadd(ban_id..'Sudo:User', result.sender_user_id_)
 local Text ="⋆ تم الغاء الأمر بنجاح "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '◗ 𝐓𝐄𝐌 𝐅𝐑𝐀𝐖𝐌 ◖',url='http://t.me/source_frawn'}},
+{{text = '◗ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ◖',url='http://t.me/s_aytra'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -22571,7 +22558,7 @@ if (text and text == "تفعيل اوامر التسليه") then
 send(msg.chat_id_, msg.id_, '⋆  تم تفعيل اوامر التسليه')
 bot_data:del(ban_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (bot_data:get(ban_id..'Name:Bot') or 'الصياد')
+local Name_Bot = (bot_data:get(ban_id..'Name:Bot') or 'سيطره')
 if not bot_data:get(ban_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -22844,7 +22831,7 @@ return false
 end    
 end   
 --------------------------------------------------------------------------------------------------------------
-source_frawn(data.message_,data)
+s_aytra(data.message_,data)
 plugin_VENOM(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
@@ -22882,7 +22869,7 @@ end
 if #list == 0 then
 t = "⋆ لا يوجد ادمن"
 end
-send(msg.chat_id_,0,''..t..'\n𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗 ━━━━━━𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗━━━━━━ 𝗦𝙊𝙐𝙍𝗖𝙀  𝙀𝗟 𝗦𝙀𝗔𝗗\n⋆ تم التعديل على الميديا\n⋆ الشخص الي قام بالتعديل\n⋆ ايدي الشخص ◂ '..result.sender_user_id_..'\n⋆ معرف الشخص ⤌{ '..users..' }') 
+send(msg.chat_id_,0,''..t..'\n𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔 ━━━━━━𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔━━━━━━ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗦𝗔𝙔𝙏𝙍𝗔\n⋆ تم التعديل على الميديا\n⋆ الشخص الي قام بالتعديل\n⋆ ايدي الشخص ◂ '..result.sender_user_id_..'\n⋆ معرف الشخص ⤌{ '..users..' }') 
 end,nil)
 DeleteMessage(msg.chat_id_,{[0] = msg.message_id_}) 
 end
@@ -22953,7 +22940,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/"..data.username_..")}\n⋆ ["..VENOMAbot.."] \n") 
 else
-send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/source_frawn)}\n⋆ ["..VENOMAbot.."] \n") 
+send(msg.chat_id_,0,"⋆ الـعـضو  : {["..data.first_name_.."](T.ME/s_aytra)}\n⋆ ["..VENOMAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
