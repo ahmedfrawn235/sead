@@ -6296,7 +6296,7 @@ end,nil)
 end 
 end
 
-if SourceCh(msg) and text == ' تفعيل الحمايه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+if SourceCh(msg) and text == 'تفعيل الحمايه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:Contact"..msg.chat_id_,'del')  
 bot_data:set(ban_id.."lock:Spam"..msg.chat_id_,'del')  
 bot_data:set(ban_id.."lock:Photo"..msg.chat_id_,'del')  
@@ -6342,7 +6342,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_, '● تم تفعيل جلب الصوره ،\n ● تم  فتح البوتات  ،\n ● تم  فتح التكرار ،\n ● تم  فتح الروابط ،\n ● تم  فتح التوجيه ،\n ● تم  فتح الملصقات ،\n ● تم  فتح المتحركه ،\n ?? تم  فتح الفيديو ،\n ● تم  فتح الفشار ،\n ● تم  فتح الانلاين ،\n ● تم  فتح تعديل المديا ،\n ● تم وضع التكرار  ،\n ● تم  فتح الفارسيه  ،\n ● تم وضع الايدي بصوره،n \n ● تم تفعيل الحمايه  بواسطه ، [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..' 』](T.ME/ '..(data.username_ or 'textchuser')..')')
 end,nil)   
 end
-if SourceCh(msg) and text == 'تفعيل الحمايه القصوه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+if SourceCh(msg) and text == 'تفعيل الحمايه القصوه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:set(ban_id.."lock:text"..msg.chat_id_,true) 
 bot_data:set(ban_id.."lock:AddMempar"..msg.chat_id_,'kick')
 bot_data:set(ban_id.."lock:Join"..msg.chat_id_,'kick')
@@ -6372,7 +6372,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,' تم قفل الحمايه كامله\nتحظير هذا الحمايه تقفل كل حاجه بلتقييد\nتفعيل الحمايه دي بس عند التفليش او التحفيل\nلتعطيل الحمايه القصوه\nاكتب تعطيل الحمايه القوصه\n تم تفعيل الحمايه القصوه من قبل [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..' 』](T.ME/'..(data.username_ or 'textchuser')..')')
 end,nil)   
 end
-if SourceCh(msg) and text == 'تعطيل الحمايه القصوه' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
+if SourceCh(msg) and text == 'تعطيل الحمايه القصوه'and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 bot_data:del(ban_id.."lock:Spam"..msg.chat_id_)  
 bot_data:del(ban_id.."lock:Join"..msg.chat_id_)  
 bot_data:del(ban_id.."lock:text"..msg.chat_id_)  
