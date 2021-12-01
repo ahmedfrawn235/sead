@@ -6391,12 +6391,12 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 send(msg.chat_id_, msg.id_,'  تم تعطيل الحمايه القصوه من قبل    [「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」](T.ME/'..(data.username_ or 'textchuser')..')  ')
 end,nil)   
 end
-
 if text == 'قفل الدردشه' and msg.reply_to_message_id_ == 0 and Manager(msg) then 
 bot_data:set(ban_id.."lock:text"..msg.chat_id_,true) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)  
 send(msg.chat_id_, msg.id_,'⋆  مـن قبـل  ⤌ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'textchuser')..') \n⋆ تـم قفـل الدردشه ')
-end,nil)   
+end,nil)
+
 elseif text == 'قفل الاضافه' and msg.reply_to_message_id_ == 0 and Mod(msg) then 
 bot_data:set(ban_id.."lock:AddMempar"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
